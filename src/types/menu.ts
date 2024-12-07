@@ -17,6 +17,11 @@ export interface MenuItem {
       label: string;
       link: string;
     };
+    nav_login_button: {
+      enable: boolean;
+      label: string;
+      link: string;
+    };
     links: {
       github: string;
       twitter: string;

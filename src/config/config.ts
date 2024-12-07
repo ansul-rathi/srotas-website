@@ -8,6 +8,11 @@ export const siteConfig: SiteConfig = {
     enable: true,
     label: "Sign Up",
     link: "/signup",
+  }, 
+  nav_login_button: {
+    enable: true,
+    label: "Log in",
+    link: "/login",
   },
   links: {
     github: "https://github.com/",

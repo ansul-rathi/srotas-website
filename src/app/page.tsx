@@ -125,29 +125,25 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <Problem  
-      // badge="Better Tools, Better Outcomes"
-      title="Today's Approaches Are Failing Clinicians and Patients"
-      statistics={customStats}
-      conclusion="Clinicians deserve better tools. Patients deserve better outcomes."
-      direction="start"
-    /> 
+      <Problem
+        // badge="Better Tools, Better Outcomes"
+        title="Today's Approaches Are Failing Clinicians and Patients"
+        statistics={customStats}
+        conclusion="Clinicians deserve better tools. Patients deserve better outcomes."
+        direction="start"
+      />
 
-<Problem  
-      // badge="Better Tools, Better Outcomes"
-      title="Today's Approaches Are Failing Clinicians and Patients"
-      statistics={customStats}
-      conclusion="Clinicians deserve better tools. Patients deserve better outcomes."
-      direction="end"
-    /> 
-    <MultipleItems />
-    <AIToolsSection />
-    <StatsSection />
-    <ContactSection />
-      {/* <Problems />
-      <Solutions />
-      <Metrics />
-      <Contact /> */}
+      <Problem
+        // badge="Better Tools, Better Outcomes"
+        title="Today's Approaches Are Failing Clinicians and Patients"
+        statistics={customStats}
+        conclusion="Clinicians deserve better tools. Patients deserve better outcomes."
+        direction="end"
+      />
+      {/* <MultipleItems /> */}
+      <AIToolsSection />
+      <StatsSection />
+      <ContactSection />
     </main>
   )
 }

@@ -27,7 +27,7 @@ import { Button } from "@components/components/ui/button";
 
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 ">
+    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 mt-20 mb-20">
       <div className="inline-block max-w-sm lg:max-w-5xl text-center justify-center text-2xl">
         <h1 className={title({ color: "blue", size: "lg" })}>
           Generative AI&nbsp;
