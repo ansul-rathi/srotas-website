@@ -129,7 +129,7 @@ export default function Home() {
       <CompanySlider />
       <LayeredVideoContainer />
       <Problem
-        // badge="Better Tools, Better Outcomes"
+        badge="Better Tools, Better Outcomes"
         title="Today's Approaches Are Failing Clinicians and Patients"
         statistics={customStats}
         conclusion="Clinicians deserve better tools. Patients deserve better outcomes."
@@ -137,10 +137,10 @@ export default function Home() {
       />
 
       <Problem
-        // badge="Better Tools, Better Outcomes"
-        title="Today's Approaches Are Failing Clinicians and Patients"
-        statistics={customStats}
-        conclusion="Clinicians deserve better tools. Patients deserve better outcomes."
+        badge="Better Tools, Better Outcomes"
+        title="Srotas Health Pioneers AI-driven Solutions for Clinical Care and Research"
+        // statistics={customStats}
+        conclusion="The Srotas Engine is a suite of LLMs trained on biomedical data to enhance clinical trial design and medical decision-making. It enables clinicians to build clear, comprehensive patient profiles from complex data while ensuring privacy and regulatory compliance."
         direction="end"
       />
       <AIToolsSection />

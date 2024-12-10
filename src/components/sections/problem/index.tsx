@@ -7,7 +7,7 @@ interface StatisticItem {
 interface ProblemProps {
     badge?: string;
     title: string;
-    statistics: StatisticItem[];
+    statistics?: StatisticItem[];
     conclusion: string;
     direction: 'start' | 'end';  
 }
