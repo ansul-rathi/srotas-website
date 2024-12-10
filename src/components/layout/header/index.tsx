@@ -40,11 +40,11 @@ const Header = () => {
 
   return (
     <>
-      <div className="h-20"></div>
+      {/* <div className="h-20"></div> */}
       <header
         ref={headerRef}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 
-          ${sticky ? "bg-white shadow-md" : "bg-transparent"} 
+          ${sticky ? "bg-white shadow-md" : "bg-[#120F24]"} 
           ${direction === 1 ? "-translate-y-full" : "translate-y-0"}`}
       >
         <nav className="container mx-auto px-4 py-4">

@@ -1,6 +1,8 @@
 "use client"
 import React, { Component } from "react";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 // IMAGES DATA FOR CAROUSEL
 interface Data {
@@ -30,7 +32,7 @@ const data: Data[] = [
 
 
 // CAROUSEL SETTINGS
-export default class MultipleItems extends Component {
+export default class CompanySlider extends Component {
     render() {
         const settings = {
             dots: false,
@@ -75,7 +77,7 @@ export default class MultipleItems extends Component {
 
         return (
 
-            <div className='text-center bg-lightpink' >
+            <div className='text-center bg-[#120F24]' >
                 <div className="mx-auto max-w-2xl py-16 px-4s sm:px-6 lg:max-w-7xl lg:px-8">
                     <div>
                         <Slider {...settings}>

@@ -107,9 +107,10 @@
 // import { Contact } from '@/components/sections/contact'
 import ProblemStatement from '@components/components/common/ProblemStatement'
 import AIToolsSection from '@components/components/sections/ai-Tools';
-import MultipleItems from '@components/components/sections/companies';
+import CompanySlider from '@components/components/sections/companies';
 import ContactSection from '@components/components/sections/contact-section';
 import Hero from '@components/components/sections/hero'
+import LayeredVideoContainer from '@components/components/sections/layered-video-container';
 import Problem from '@components/components/sections/problem';
 import StatsSection from '@components/components/sections/stats-section';
 
@@ -125,6 +126,8 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <CompanySlider />
+      <LayeredVideoContainer />
       <Problem
         // badge="Better Tools, Better Outcomes"
         title="Today's Approaches Are Failing Clinicians and Patients"
@@ -140,9 +143,7 @@ export default function Home() {
         conclusion="Clinicians deserve better tools. Patients deserve better outcomes."
         direction="end"
       />
-      {/* <MultipleItems /> */}
       <AIToolsSection />
-      <StatsSection />
       <ContactSection />
     </main>
   )

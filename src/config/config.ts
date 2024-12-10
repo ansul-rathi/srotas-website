@@ -3,7 +3,7 @@
 import { SiteConfig } from "@components/types/menu";
 
 export const siteConfig: SiteConfig = {
-  logo: "/images/logo.svg",
+  logo: "/logo.svg",
   nav_button: {
     enable: true,
     label: "Sign Up",
