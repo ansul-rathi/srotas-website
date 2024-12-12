@@ -28,7 +28,7 @@ const ProblemStatement: React.FC<ProblemStatementProps> = ({
       </div>
 
       {/* Title */}
-      <h2 className="text-4xl md:text-5xl lg:text-4xl text-black font-semibold tracking-tight leading-loose mb-8">
+      <h2 className="text-4xl md:text-5xl lg:text-4xl text-black font-semibold leading-tight mb-8">
         {title}
       </h2>
 

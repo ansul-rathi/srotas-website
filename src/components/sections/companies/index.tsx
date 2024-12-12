@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 
-// IMAGES DATA FOR CAROUSEL
 interface Data {
     imgSrc: string;
 }
@@ -26,9 +25,8 @@ const data: Data[] = [
     {
         imgSrc: "/images/Companies/The New York Times.svg"
     }
-]
+];
 
-// CAROUSEL SETTINGS
 export default class CompanySlider extends Component {
     render() {
         const settings = {
@@ -41,59 +39,71 @@ export default class CompanySlider extends Component {
             speed: 2000,
             autoplaySpeed: 2000,
             cssEase: "linear",
+            pauseOnHover: true,
             responsive: [
                 {
-                    breakpoint: 1024,
+                    breakpoint: 1536, // 2xl
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 1280, // xl
                     settings: {
                         slidesToShow: 4,
                         slidesToScroll: 1,
-                        infinite: true,
-                        dots: false
                     }
                 },
                 {
-                    breakpoint: 700,
+                    breakpoint: 1024, // lg
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 768, // md
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 1,
-                        infinite: true,
-                        dots: false
                     }
                 },
                 {
-                    breakpoint: 500,
+                    breakpoint: 640, // sm
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
-                        infinite: true,
-                        dots: false
+                        speed: 500,
+                        autoplaySpeed: 3000,
                     }
                 }
             ]
         };
 
         return (
-            <div className='text-center bg-transparent'>
-                <div className="mx-auto max-w-2xl py-16 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-                    <div>
-                        <Slider {...settings}>
-                            {data.map((item, i) =>
-                                <div key={i} className="flex items-center justify-center h-24">
-                                    <div className="flex items-center justify-center w-full h-full px-4">
+            <div className="w-full bg-transparent">
+                <div className="max-w-[90%] mx-auto py-8 sm:py-12 md:py-16">
+                    <Slider {...settings}>
+                        {data.map((item, i) => (
+                            <div key={i} className="outline-none focus:outline-none">
+                                <div className="px-2 sm:px-4 md:px-6 lg:px-8 py-4">
+                                    <div className="flex items-center justify-center h-16 sm:h-20 md:h-24 lg:h-28">
                                         <Image
-                                            src={item.imgSrc} 
-                                            alt={item.imgSrc} 
-                                            className="max-h-full max-w-full object-contain"
-                                            width={100}
-                                            height={50}
+                                            src={item.imgSrc}
+                                            alt={`Company logo ${i + 1}`}
+                                            width={200}
+                                            height={100}
+                                            className="w-auto h-full object-contain filter brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300"
+                                            priority={i < 3}
                                         />
                                     </div>
                                 </div>
-                            )}
-                        </Slider>
-                    </div>
+                            </div>
+                        ))} 
+                    </Slider>
                 </div>
             </div>
-        )
+        );
     }
 }

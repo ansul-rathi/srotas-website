@@ -330,7 +330,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {showMenu && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-[#120F24] shadow-lg">
             <ul className="px-4 py-2">
               {main.map((item, i) => (
                 <li key={`mobile-${i}`} className="py-2">
@@ -354,7 +354,7 @@ const Header = () => {
                   ) : (
                     <Link
                       href={item.url}
-                      className="text-gray-800 hover:text-blue-400"
+                      className="text-white hover:text-blue-400"
                       onClick={() => setShowMenu(false)}
                     >
                       {item.name}

@@ -51,7 +51,7 @@ const AIToolsSection = () => {
     const [selected, setSelected] = useState("insightMatch");
 
     return (
-        <section className="bg-gray-100 pb-28">
+        <section className="bg-gray-100 pb-8 md:pb-12 lg:pb-20">
             <div className='py-8 md:py-12 lg:py-20'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-center mb-8 md:mb-12 leading-tight text-black">
@@ -69,7 +69,7 @@ const AIToolsSection = () => {
                             classNames={{
                                 base: "w-full",
                                 tabList: "w-full relative p-0 border border-black ",
-                                tab: "h-12 px-4 md:px-8 bg-gray-200  data-[selected=true]:text-white transition-colors",
+                                tab: "h-12 px-4 md:px-8 data-[selected=true]:text-white transition-colors",
                                 cursor: "bg-white",
                                 panel: "pt-4",
                             }}
