@@ -83,7 +83,7 @@ export default class CompanySlider extends Component {
 
         return (
             <div className="w-full bg-transparent">
-                <div className="max-w-[90%] mx-auto py-8 sm:py-12 md:py-16">
+                <div className="max-w-[100%] mx-auto py-8 sm:py-12 md:py-16">
                     <Slider {...settings}>
                         {data.map((item, i) => (
                             <div key={i} className="outline-none focus:outline-none">
