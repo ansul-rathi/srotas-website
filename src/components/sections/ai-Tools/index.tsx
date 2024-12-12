@@ -26,23 +26,21 @@ const toolsData: ToolData[] = [
     {
         id: "dataLink",
         title: "DataLink",
-        description: "Your DataLink description here",
+        description: "AI-driven tool that pools relevant patient data from diverse sources and presents it in a clear format, reducing administrative burdens and improving clinical decision-making.",
         features: [
-            "Feature 1",
-            "Feature 2",
-            "Feature 3",
-            "Feature 4"
+            "Automated Patient Data Structuring",
+            "EHR Search with Automated Citations",
+            "Efficient Precharting",
         ]
     },
     {
         id: "outcomePredict",
         title: "OutcomePredict",
-        description: "Your OutcomePredict description here",
+        description: "Leverages AI and real-time analytics to optimize trial management, improve patient outcomes, and drive clinical trial success.",
         features: [
-            "Feature 1",
-            "Feature 2",
-            "Feature 3",
-            "Feature 4"
+            "Real-time Analytics Dashboard",
+            "Patient Health Prediction",
+            "Clinical Trial Forecasting"
         ]
     }
 ];
