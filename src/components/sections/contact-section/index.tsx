@@ -18,7 +18,12 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="bg-[#120F24] py-20">
+    <section className="py-20"  style={{
+      backgroundImage: 'url("/images/bg.png")', // Update with your image path
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Left Column - Content */}
@@ -37,21 +42,21 @@ const ContactSection = () => {
 
             {/* Contact Information */}
             <div className="space-y-8">
-              <div className="bg-[#1F1F1F] p-6">
-                <p className="text-sm text-gray-400 mb-2">LOCATION</p>
-                <p className="text-white text-xl">82 Muscat Street, Sydney 🇦🇺</p>
-              </div>
+            <div className="bg-white/10 p-6">
+  <p className="text-gray-400 text-sm mb-2">LOCATION</p>
+  <p className="text-white text-xl">82 Muscat Street, Sydney 🇦🇺</p>
+</div>
 
-              <div className="bg-[#1F1F1F] p-6">
-                <p className="text-sm text-gray-400 mb-2">CALL US</p>
+<div className="bg-white/10 p-6">
+<p className="text-sm text-gray-400 mb-2">CALL US</p>
                 <p className="text-white text-xl">+61 (08) 9079 8383</p>
               </div>
             </div>
           </div>
 
           {/* Right Column - Form */}
-          <div className="bg-[#1F1F1F] p-8">
-            <div className="mb-8">
+          <div className="bg-white/15 p-8">
+          <div className="mb-8">
               <h3 className="text-3xl font-semibold text-white mb-2">Get connected</h3>
               <p className="text-white">
                 Let's work together to transform patient care.
@@ -67,7 +72,7 @@ const ContactSection = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, firstName: e.target.value })
                   }
-                  className="w-full h-14 px-4 bg-[#2F2F2F] text-white text-lg placeholder-gray-400 focus:outline-none"
+                  className="w-full h-14 px-4 bg-white/15 text-white text-lg placeholder-white placeholder:opacity-60 focus:outline-none"
                 />
                 <input
                   type="text"
@@ -76,7 +81,7 @@ const ContactSection = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, lastName: e.target.value })
                   }
-                  className="w-full h-14 px-4 bg-[#2F2F2F] text-white text-lg placeholder-gray-400 focus:outline-none"
+                  className="w-full h-14 px-4 bg-white/15 text-white text-lg placeholder-white placeholder:opacity-60 focus:outline-none"
                 />
               </div>
 
@@ -86,14 +91,14 @@ const ContactSection = () => {
                   placeholder="Email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full h-14 px-4 bg-[#2F2F2F] text-white text-lg placeholder-gray-400 focus:outline-none"
+                  className="w-full h-14 px-4 bg-white/15 text-white text-lg placeholder-white placeholder:opacity-60 focus:outline-none"
                 />
                 <input
                   type="tel"
                   placeholder="Phone Number"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full h-14 px-4 bg-[#2F2F2F] text-white text-lg placeholder-gray-400 focus:outline-none"
+                  className="w-full h-14 px-4 bg-white/15 text-white text-lg placeholder-white placeholder:opacity-60 focus:outline-none"
                 />
               </div>
 
@@ -102,12 +107,13 @@ const ContactSection = () => {
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 rows={4}
-                className="w-full p-4 bg-[#2F2F2F] text-white text-lg placeholder-gray-400 focus:outline-none resize-none min-h-[160px]"
+                // className="w-full h-14 px-4  text-white text-lg placeholder-white placeholder:opacity-60 focus:outline-none"
+                className="w-full p-4 bg-white/15 text-white text-lg placeholder-white placeholder:opacity-60 focus:outline-none resize-none min-h-[160px]"
               />
 
               <button
                 type="submit"
-                className="w-full bg-[#7828C8] text-white h-14 text-lg hover:bg-[#6620A6] transition-colors"
+                className="w-full bg-[#6936F4] text-white h-14 text-lg hover:bg-[#622df7] transition-colors"
               >
                 Contact us
               </button>

@@ -126,7 +126,6 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <CompanySlider />
       <LayeredVideoContainer />
       <Problem
         badge="Better Tools, Better Outcomes"

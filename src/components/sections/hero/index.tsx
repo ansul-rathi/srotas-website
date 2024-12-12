@@ -25,10 +25,18 @@
 import { title } from "@components/components/primitives";
 // import { Button } from "@components/components/ui/button";
 import { Button } from "@nextui-org/button";
+import CompanySlider from "../companies";
 
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 mt-20 bg-[#120F24]">
+    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 mt-20 bg-[#120F24]" 
+    style={{
+      backgroundImage: 'url("/images/bg.png")', // Update with your image path
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}
+    >
       <div className="inline-block max-w-sm lg:max-w-5xl text-center justify-center text-2xl">
         <h1 className={`${title({ color: "blue", size: "lg" })} bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600`}>
           Generative AI&nbsp;
@@ -47,6 +55,8 @@ export default function Home() {
           </svg>
         }>Get Started</Button>
       </div>
+
+      <CompanySlider />
     </section>
   );
 }

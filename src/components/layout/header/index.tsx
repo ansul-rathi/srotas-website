@@ -44,8 +44,13 @@ const Header = () => {
       <header
         ref={headerRef}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 
-          ${sticky ? "bg-white shadow-md" : "bg-[#120F24]"} 
           ${direction === 1 ? "-translate-y-full" : "translate-y-0"}`}
+        style={{
+          backgroundImage: 'url("/images/bg.png")', // Update with your image path
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
       >
         <nav className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -56,7 +61,7 @@ const Header = () => {
                 <li key={`menu-${i}`} className="relative group">
                   {item.hasChildren ? (
                     <>
-                      <span className={`cursor-pointer inline-flex items-center hover:text-gray-600 ${sticky ? 'text-black' : 'text-white'}`}>
+                      <span className={`cursor-pointer inline-flex items-center hover:text-gray-600 ${sticky ? 'text-white' : 'text-white'}`}>
                         {item.name}
                         <svg className="h-4 w-4 ml-1" viewBox="0 0 20 20">
                           <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
@@ -67,7 +72,7 @@ const Header = () => {
                           <li key={`child-${j}`}>
                             <Link
                               href={child.url}
-                              className="block px-4 py-2 text-black hover:bg-gray-50 hover:text-gray-600"
+                              className="block px-4 py-2 text-white hover:bg-gray-50 hover:text-gray-600"
                             >
                               {child.name}
                             </Link>
@@ -79,8 +84,8 @@ const Header = () => {
                     <Link
                       href={item.url}
                       className={`hover:text-gray-600 ${pathname === item.url
-                          ? sticky ? 'text-black' : 'text-white'
-                          : sticky ? 'text-black' : 'text-white'
+                        ? sticky ? 'text-white' : 'text-white'
+                        : sticky ? 'text-white' : 'text-white'
                         }`}
                     >
                       {item.name}
@@ -91,29 +96,29 @@ const Header = () => {
             </ul>
 
             {siteConfig.nav_button.enable && (
-                <div className="hidden lg:flex items-center gap-4"> {/* Added container with gap-4 */}
+              <div className="hidden lg:flex items-center gap-4"> {/* Added container with gap-4 */}
                 <Link
                   href={siteConfig.nav_button.link}
                   className={`hidden lg:inline-flex items-center px-6 py-2 transition-colors ${sticky
-                    ? ' text-black hover:bg-black hover:text-white'
-                    : ' text-white hover:bg-white hover:text-black'
-                  }`}                >
+                    ? ' text-white hover:bg-black hover:text-white'
+                    : ' text-white hover:bg-white hover:text-white'
+                    }`}                >
                   {siteConfig.nav_login_button.label}
                 </Link>
                 <Link
                   href={siteConfig.nav_button.link}
                   className={`hidden lg:inline-flex items-center px-6 py-2 border transition-colors ${sticky
-                      ? 'border-black text-black hover:bg-black hover:text-white'
-                      : 'border-white text-white hover:bg-white hover:text-black'
+                    ? 'border-black text-white hover:bg-black hover:text-white'
+                    : 'border-white text-white hover:bg-white hover:text-white'
                     }`}
                 >
                   {siteConfig.nav_button.label}
                 </Link>
-                </div>
+              </div>
             )}
 
             <button
-              className={`lg:hidden ${sticky ? 'text-black' : 'text-white'}`}
+              className={`lg:hidden ${sticky ? 'text-white' : 'text-white'}`}
               onClick={() => setShowMenu(!showMenu)}
             >
               {showMenu ? <X size={24} /> : <MenuIcon size={24} />}
@@ -128,13 +133,13 @@ const Header = () => {
                   <li key={`mobile-${i}`} className="py-2">
                     {item.hasChildren ? (
                       <>
-                        <span className="font-medium text-black">{item.name}</span>
+                        <span className="font-medium text-white">{item.name}</span>
                         <ul className="pl-4 mt-2 space-y-2">
                           {item.children?.map((child, j) => (
                             <li key={`mobile-child-${j}`}>
                               <Link
                                 href={child.url}
-                                className="text-gray-600 hover:text-black"
+                                className="text-gray-600 hover:text-white"
                                 onClick={() => setShowMenu(false)}
                               >
                                 {child.name}
@@ -146,7 +151,7 @@ const Header = () => {
                     ) : (
                       <Link
                         href={item.url}
-                        className="text-black hover:text-gray-600"
+                        className="text-white hover:text-gray-600"
                         onClick={() => setShowMenu(false)}
                       >
                         {item.name}

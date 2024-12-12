@@ -11,25 +11,21 @@ interface Data {
 
 const data: Data[] = [
     {
-        imgSrc: "/images/Companies/birdseye.svg"
+        imgSrc: "/images/Companies/Apple.svg"
     },
     {
-        imgSrc: "/images/Companies/break.svg"
+        imgSrc: "/images/Companies/CocaCola.svg"
     },
     {
-        imgSrc: "/images/Companies/keddar.svg"
+        imgSrc: "/images/Companies/Samsung.svg"
     },
     {
-        imgSrc: "/images/Companies/shield.svg"
+        imgSrc: "/images/Companies/The Guardian.svg"
     },
     {
-        imgSrc: "/images/Companies/tandov.svg"
-    },
-    {
-        imgSrc: "/images/Companies/tree.svg"
-    },
+        imgSrc: "/images/Companies/The New York Times.svg"
+    }
 ]
-
 
 // CAROUSEL SETTINGS
 export default class CompanySlider extends Component {
@@ -76,21 +72,25 @@ export default class CompanySlider extends Component {
         };
 
         return (
-
-            <div className='text-center bg-[#120F24]' >
-                <div className="mx-auto max-w-2xl py-16 px-4s sm:px-6 lg:max-w-7xl lg:px-8">
+            <div className='text-center bg-transparent'>
+                <div className="mx-auto max-w-2xl py-16 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
                     <div>
                         <Slider {...settings}>
                             {data.map((item, i) =>
-                                <div key={i}>
-                                    <img src={item.imgSrc} alt={item.imgSrc} />
+                                <div key={i} className="flex items-center justify-center h-24">
+                                    <div className="flex items-center justify-center w-full h-full px-4">
+                                        <img 
+                                            src={item.imgSrc} 
+                                            alt={item.imgSrc} 
+                                            className="max-h-full max-w-full object-contain"
+                                        />
+                                    </div>
                                 </div>
                             )}
                         </Slider>
                     </div>
                 </div>
             </div>
-
         )
     }
 }
