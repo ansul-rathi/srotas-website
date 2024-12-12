@@ -15,17 +15,17 @@ export const menu: MenuConfig = {
     {
       name: "Solutions/Products",
       url: "#",
-      hasChildren: true,
-      children: [
-        {
-          name: "InsightMatch",
-          url: "/solutions/insight-match",
-        },
-        {
-          name: "DataLink",
-          url: "/solutions/data-link",
-        }
-      ],
+      // hasChildren: true,
+      // children: [
+      //   {
+      //     name: "InsightMatch",
+      //     url: "/solutions/insight-match",
+      //   },
+      //   {
+      //     name: "DataLink",
+      //     url: "/solutions/data-link",
+      //   }
+      // ],
     },
     {
       name: "Blog",

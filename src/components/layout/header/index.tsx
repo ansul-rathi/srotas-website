@@ -61,7 +61,7 @@ const Header = () => {
                 <li key={`menu-${i}`} className="relative group">
                   {item.hasChildren ? (
                     <>
-                      <span className={`cursor-pointer inline-flex items-center hover:text-gray-600 ${sticky ? 'text-white' : 'text-white'}`}>
+                      <span className={`cursor-pointer inline-flex items-center hover:text-blue-400 ${sticky ? 'text-white' : 'text-white'}`}>
                         {item.name}
                         <svg className="h-4 w-4 ml-1" viewBox="0 0 20 20">
                           <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
@@ -72,7 +72,7 @@ const Header = () => {
                           <li key={`child-${j}`}>
                             <Link
                               href={child.url}
-                              className="block px-4 py-2 text-white hover:bg-gray-50 hover:text-gray-600"
+                              className="block px-4 py-2 text-white hover:bg-gray-50 hover:text-blue-400"
                             >
                               {child.name}
                             </Link>
@@ -83,7 +83,7 @@ const Header = () => {
                   ) : (
                     <Link
                       href={item.url}
-                      className={`hover:text-gray-600 ${pathname === item.url
+                      className={`hover:text-blue-400 ${pathname === item.url
                         ? sticky ? 'text-white' : 'text-white'
                         : sticky ? 'text-white' : 'text-white'
                         }`}
@@ -100,7 +100,7 @@ const Header = () => {
                 <Link
                   href={siteConfig.nav_button.link}
                   className={`hidden lg:inline-flex items-center px-6 py-2 transition-colors ${sticky
-                    ? ' text-white hover:bg-black hover:text-white'
+                    ? ' text-white hover:bg-white hover:text-white'
                     : ' text-white hover:bg-white hover:text-white'
                     }`}                >
                   {siteConfig.nav_login_button.label}
@@ -108,7 +108,7 @@ const Header = () => {
                 <Link
                   href={siteConfig.nav_button.link}
                   className={`hidden lg:inline-flex items-center px-6 py-2 border transition-colors ${sticky
-                    ? 'border-black text-white hover:bg-black hover:text-white'
+                    ? 'border-white text-white hover:bg-white hover:text-white'
                     : 'border-white text-white hover:bg-white hover:text-white'
                     }`}
                 >
@@ -139,7 +139,7 @@ const Header = () => {
                             <li key={`mobile-child-${j}`}>
                               <Link
                                 href={child.url}
-                                className="text-gray-600 hover:text-white"
+                                className="text-blue-400 hover:text-white"
                                 onClick={() => setShowMenu(false)}
                               >
                                 {child.name}
@@ -151,7 +151,7 @@ const Header = () => {
                     ) : (
                       <Link
                         href={item.url}
-                        className="text-white hover:text-gray-600"
+                        className="text-white hover:text-blue-400"
                         onClick={() => setShowMenu(false)}
                       >
                         {item.name}

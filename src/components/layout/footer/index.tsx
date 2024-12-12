@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import Logo from "../header/logo";
+import { siteConfig } from "@components/config/config";
 
 const Footer = () => {
   const navigation = {
@@ -41,18 +43,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Logo and Description */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <Image 
-                src="/logo.svg" 
-                alt="Srotas Health" 
-                width={40} 
-                height={40} 
-              />
-              {/* <span className="text-white font-bold text-xl">
-                SROTAS HEALTH
-              </span> */}
-            </div>
-            <p className="text-gray-400 mb-6">
+          <Logo src={siteConfig.logo} />
+          <p className="text-gray-400 mb-6 mt-5">
               Generative AI for Faster Clinical Trials and Better Cancer Care
             </p>
           </div>

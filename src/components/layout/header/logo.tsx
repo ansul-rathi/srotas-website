@@ -13,8 +13,8 @@ const Logo = ({ src }: LogoProps) => {
         <Image 
           src={src} 
           alt="Srotas Health" 
-          width={40} 
-          height={40}
+          width={100} 
+          height={100}
           priority // Since this is above the fold
         />
         {/* <span className="text-xl font-semibold text-white">
