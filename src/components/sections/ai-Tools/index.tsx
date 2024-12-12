@@ -60,7 +60,7 @@ const AIToolsSection = () => {
                         <span className="block mt-2">of Clinical Research and Healthcare</span>
                     </h2>
 
-                    <div className="bg-gray-200 max-w-3xl mx-auto mb-8 md:mb-12 py-1 px-1 border-2 border-white">
+                    <div className="bg-gray-200 max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-12 py-1 px-1 border-2 border-white">
                         <Tabs
                             aria-label="AI Tools"
                             selectedKey={selected}
@@ -68,8 +68,8 @@ const AIToolsSection = () => {
                             variant="light"
                             classNames={{
                                 base: "w-full",
-                                tabList: "w-full relative p-0 ",
-                                tab: "h-12 px-4 md:px-8 data-[selected=true]:text-white transition-colors py-2",
+                                tabList: "w-full relative p-0 flex",
+                                tab: "flex-1 h-10 sm:h-12 text-[10px] xs:text-xs sm:text-sm md:text-base px-1 xs:px-2 sm:px-4 md:px-8 data-[selected=true]:text-white transition-colors py-1 sm:py-2",
                                 cursor: "bg-white",
                                 panel: "pt-4",
                             }}
@@ -77,39 +77,41 @@ const AIToolsSection = () => {
                             <Tab
                                 key="insightMatch"
                                 title={
-                                    <div className="flex items-center justify-center w-full relative">
-                                    
-                                     <span className={`text-sm md:text-base font-medium ${selected === 'insightMatch' ? 'text-black' : 'text-black'}`}>
-                                         InsightMatch
-                                     </span>
-                                    {/* Separator - show only if not last tab and not selected */}
-                                    <div className={`absolute right-[-80] top-1/2 -translate-y-1/2 h-5 w-px bg-black
-                                        ${selected === 'dataLink' ? 'hidden' : ''}`} />
-                                </div>
+                                    <div className="flex items-center justify-center w-full relative whitespace-nowrap">
+                                        <span className={`font-medium ${selected === 'insightMatch' ? 'text-black' : 'text-black'}`}>
+                                            InsightMatch
+                                        </span>
+                                        <div className={`absolute 
+                        right-[-30px] xs:right-[-20px] sm:right-[-50px] md:right-[-80px] 
+                        top-1/2 -translate-y-1/2 h-3 sm:h-4 md:h-5 w-px bg-black
+                        ${selected === 'dataLink' ? 'hidden' : ''}`}
+                                        />
+                                    </div>
                                 }
                             />
-                            
+
                             <Tab
                                 key="dataLink"
                                 title={
-                                    <span className={`text-sm md:text-base font-medium ${selected === 'dataLink' ? 'text-black' : 'text-black'}`}>
+                                    <span className={`font-medium whitespace-nowrap ${selected === 'dataLink' ? 'text-black' : 'text-black'}`}>
                                         DataLink
                                     </span>
                                 }
                             />
+
                             <Tab
                                 key="outcomePredict"
                                 title={
-                                      <div className="flex items-center justify-center w-full relative">
-                                    
-                                      
-                                    <span className={`text-sm md:text-base font-medium ${selected === 'outcomePredict' ? 'text-black' : 'text-black'}`}>
-                                        OutcomePredict
-                                    </span>
-                                     {/* Separator - show only if not last tab and not selected */}
-                                     <div className={`absolute left-[-70] top-1/2 -translate-y-1/2 h-5 w-px bg-black
-                                         ${selected === 'dataLink' ? 'hidden' : ''}`} />
-                                 </div>
+                                    <div className="flex items-center justify-center w-full relative whitespace-nowrap">
+                                        <span className={`font-medium ${selected === 'outcomePredict' ? 'text-black' : 'text-black'}`}>
+                                            OutcomePredict
+                                        </span>
+                                        <div className={`absolute 
+                        left-[-25px] xs:left-[-20px] sm:left-[-50px] md:left-[-70px] 
+                        top-1/2 -translate-y-1/2 h-3 sm:h-4 md:h-5 w-px bg-black
+                        ${selected === 'dataLink' ? 'hidden' : ''}`}
+                                        />
+                                    </div>
                                 }
                             />
                         </Tabs>

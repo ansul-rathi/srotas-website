@@ -71,7 +71,7 @@ import CompanySlider from "../companies";
 export default function Home() {
   return (
     <section 
-      className="flex flex-col items-center justify-center gap-4 pb-8 md:pb-10 pt-16 sm:pt-48 bg-[#120F24] min-h-[calc(100vh-4rem)]" 
+      className="flex flex-col items-center justify-center gap-4 pb-8 md:pb-10 pt-28 sm:pt-48 bg-[#120F24] min-h-[calc(100vh-4rem)]" 
       style={{
         backgroundImage: 'url("/images/bg.png")',
         backgroundSize: 'cover',

@@ -10,10 +10,10 @@ const LayeredVideoContainer = () => {
       </div>
 
       {/* Content Container */}
-      <div className="relative w-full max-w-6xl mx-auto h-[700px] flex items-center justify-center">
+      <div className="relative w-full max-w-6xl mx-auto h-[500px] flex items-center justify-center">
         {/* Background layers */}
-        <div className="absolute top-12 right-6 w-4/5 h-4/5 bg-gray-400 rounded-xl transform rotate-2" />
-        <div className="absolute top-6 right-12 w-4/5 h-4/5 bg-gray-300 rounded-xl transform -rotate-1" />
+        <div className="absolute top-8 right-4 w-4/5 h-4/5 bg-gray-400 rounded-xl transform rotate-2" />
+        <div className="absolute top-4 right-8 w-4/5 h-4/5 bg-gray-300 rounded-xl transform -rotate-1" />
         
         {/* Main video container */}
         <div className="relative w-4/5 h-4/5 bg-white rounded-xl shadow-xl flex items-center justify-center">
