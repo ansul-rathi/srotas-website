@@ -60,7 +60,7 @@ const AIToolsSection = () => {
                         <span className="block mt-2">of Clinical Research and Healthcare</span>
                     </h2>
 
-                    <div className="max-w-3xl mx-auto mb-8 md:mb-12">
+                    <div className="bg-gray-200 max-w-3xl mx-auto mb-8 md:mb-12 py-1 px-1 border-2 border-white">
                         <Tabs
                             aria-label="AI Tools"
                             selectedKey={selected}
@@ -68,8 +68,8 @@ const AIToolsSection = () => {
                             variant="light"
                             classNames={{
                                 base: "w-full",
-                                tabList: "w-full relative p-0 border border-black ",
-                                tab: "h-12 px-4 md:px-8 data-[selected=true]:text-white transition-colors",
+                                tabList: "w-full relative p-0 ",
+                                tab: "h-12 px-4 md:px-8 data-[selected=true]:text-white transition-colors py-2",
                                 cursor: "bg-white",
                                 panel: "pt-4",
                             }}
@@ -77,11 +77,18 @@ const AIToolsSection = () => {
                             <Tab
                                 key="insightMatch"
                                 title={
-                                    <span className={`text-sm md:text-base font-medium ${selected === 'insightMatch' ? 'text-black' : 'text-black'}`}>
-                                        InsightMatch
-                                    </span>
+                                    <div className="flex items-center justify-center w-full relative">
+                                    
+                                     <span className={`text-sm md:text-base font-medium ${selected === 'insightMatch' ? 'text-black' : 'text-black'}`}>
+                                         InsightMatch
+                                     </span>
+                                    {/* Separator - show only if not last tab and not selected */}
+                                    <div className={`absolute right-[-80] top-1/2 -translate-y-1/2 h-5 w-px bg-black
+                                        ${selected === 'dataLink' ? 'hidden' : ''}`} />
+                                </div>
                                 }
                             />
+                            
                             <Tab
                                 key="dataLink"
                                 title={
@@ -93,9 +100,16 @@ const AIToolsSection = () => {
                             <Tab
                                 key="outcomePredict"
                                 title={
+                                      <div className="flex items-center justify-center w-full relative">
+                                    
+                                      
                                     <span className={`text-sm md:text-base font-medium ${selected === 'outcomePredict' ? 'text-black' : 'text-black'}`}>
                                         OutcomePredict
                                     </span>
+                                     {/* Separator - show only if not last tab and not selected */}
+                                     <div className={`absolute left-[-70] top-1/2 -translate-y-1/2 h-5 w-px bg-black
+                                         ${selected === 'dataLink' ? 'hidden' : ''}`} />
+                                 </div>
                                 }
                             />
                         </Tabs>

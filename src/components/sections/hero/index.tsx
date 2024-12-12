@@ -71,7 +71,7 @@ import CompanySlider from "../companies";
 export default function Home() {
   return (
     <section 
-      className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 mt-16 sm:mt-20 bg-[#120F24] min-h-[calc(100vh-4rem)]" 
+      className="flex flex-col items-center justify-center gap-4 pb-8 md:pb-10 pt-16 sm:pt-48 bg-[#120F24] min-h-[calc(100vh-4rem)]" 
       style={{
         backgroundImage: 'url("/images/bg.png")',
         backgroundSize: 'cover',
@@ -102,7 +102,7 @@ export default function Home() {
         {/* Description Section */}
         <div className="flex justify-center items-center mt-4 sm:mt-6 md:mt-8">
           <p className="text-sm sm:text-base md:text-lg 
-            text-white/90 w-full sm:w-4/5 md:w-3/4 lg:w-2/3
+            text-white/90 w-full sm:w-4/5 md:w-3/4
             leading-relaxed">
             Healthcare and clinical trials sectors must evolve to leverage recent advances in AI. 
             Srotas Health provides researchers and clinicians with tailored AI technology to drive 
@@ -115,7 +115,7 @@ export default function Home() {
           className="mt-6 sm:mt-8 md:mt-10 
             bg-indigo-600 hover:bg-indigo-700 
             text-white text-sm sm:text-base
-            px-6 py-2 sm:px-8 sm:py-3
+            px-6 py-2 sm:px-8 sm:py-6
             transition-all duration-300 ease-in-out" 
           endContent={
             <svg 
