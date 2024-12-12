@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 // IMAGES DATA FOR CAROUSEL
 interface Data {
@@ -79,10 +80,12 @@ export default class CompanySlider extends Component {
                             {data.map((item, i) =>
                                 <div key={i} className="flex items-center justify-center h-24">
                                     <div className="flex items-center justify-center w-full h-full px-4">
-                                        <img 
+                                        <Image
                                             src={item.imgSrc} 
                                             alt={item.imgSrc} 
                                             className="max-h-full max-w-full object-contain"
+                                            width={100}
+                                            height={50}
                                         />
                                     </div>
                                 </div>

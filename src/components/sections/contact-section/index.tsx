@@ -1,5 +1,4 @@
 "use client";
-import { Input, Textarea, Button } from "@nextui-org/react";
 import { useState } from "react";
 
 const ContactSection = () => {
@@ -18,7 +17,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="py-20"  style={{
+    <section className="py-20" style={{
       backgroundImage: 'url("/images/bg.png")', // Update with your image path
       backgroundSize: 'cover',
       backgroundPosition: 'center',
@@ -42,13 +41,13 @@ const ContactSection = () => {
 
             {/* Contact Information */}
             <div className="space-y-8">
-            <div className="bg-white/10 p-6">
-  <p className="text-gray-400 text-sm mb-2">LOCATION</p>
-  <p className="text-white text-xl">82 Muscat Street, Sydney 🇦🇺</p>
-</div>
+              <div className="bg-white/10 p-6">
+                <p className="text-gray-400 text-sm mb-2">LOCATION</p>
+                <p className="text-white text-xl">82 Muscat Street, Sydney 🇦🇺</p>
+              </div>
 
-<div className="bg-white/10 p-6">
-<p className="text-sm text-gray-400 mb-2">CALL US</p>
+              <div className="bg-white/10 p-6">
+                <p className="text-sm text-gray-400 mb-2">CALL US</p>
                 <p className="text-white text-xl">+61 (08) 9079 8383</p>
               </div>
             </div>
@@ -56,10 +55,10 @@ const ContactSection = () => {
 
           {/* Right Column - Form */}
           <div className="bg-white/15 p-8">
-          <div className="mb-8">
+            <div className="mb-8">
               <h3 className="text-3xl font-semibold text-white mb-2">Get connected</h3>
               <p className="text-white">
-                Let's work together to transform patient care.
+                Let work together to transform patient care.
               </p>
             </div>
 

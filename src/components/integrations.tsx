@@ -1,5 +1,6 @@
 "use client";
 import { Chip } from "@nextui-org/react";
+import Image from "next/image";
 import React from "react";
 
 function Integrations() {
@@ -18,7 +19,7 @@ function Integrations() {
         quickly with our Google Calendar and Outlook integrations.
       </h1>
 
-      <img alt="integration" className="mt-4 lg:mt-10" src="/integration.svg" />
+      <Image alt="integration" className="mt-4 lg:mt-10" src="/integration.svg" />
     </div>
   );
 }

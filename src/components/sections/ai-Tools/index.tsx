@@ -51,7 +51,7 @@ const AIToolsSection = () => {
     const [selected, setSelected] = useState("insightMatch");
 
     return (
-        <section className="bg-gray-200 pb-28">
+        <section className="bg-gray-100 pb-28">
             <div className='py-8 md:py-12 lg:py-20'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-center mb-8 md:mb-12 leading-tight text-black">
@@ -111,8 +111,8 @@ const AIToolsSection = () => {
                             }}>
                                 <div className="flex flex-col lg:flex-row gap-6 lg:gap-12">
                                     <div className="w-full lg:w-1/2">
-                                        <div className="bg-white border border-gray-200 w-full aspect-video md:h-[400px] lg:h-[500px] flex items-center justify-center">
-                                            <p className="text-black">Video or animation</p>
+                                        <div className="bg-white/40 border border-gray-200 w-full aspect-video md:h-[400px] lg:h-[500px] flex items-center justify-center">
+                                            <p className="text-white">Video or animation</p>
                                         </div>
                                     </div>
 

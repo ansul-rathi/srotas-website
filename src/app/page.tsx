@@ -105,14 +105,11 @@
 // import { Solutions } from '@/components/sections/solutions'
 // import { Metrics } from '@/components/sections/metrics'
 // import { Contact } from '@/components/sections/contact'
-import ProblemStatement from '@components/components/common/ProblemStatement'
 import AIToolsSection from '@components/components/sections/ai-Tools';
-import CompanySlider from '@components/components/sections/companies';
 import ContactSection from '@components/components/sections/contact-section';
 import Hero from '@components/components/sections/hero'
 import LayeredVideoContainer from '@components/components/sections/layered-video-container';
 import Problem from '@components/components/sections/problem';
-import StatsSection from '@components/components/sections/stats-section';
 
 export default function Home() {
   const customStats = [
