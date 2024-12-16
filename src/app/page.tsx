@@ -134,9 +134,9 @@ export default function Home() {
 
       <Problem
         badge="Better Tools, Better Outcomes"
-        title="Srotas Health Pioneers AI-driven Solutions for Clinical Care and Research"
+        title="Pioneering AI-driven Solutions for Clinical Care and Research"
         // statistics={customStats}
-        conclusion="The Srotas Engine is a suite of LLMs trained on biomedical data to enhance clinical trial design and medical decision-making. It enables clinicians to build clear, comprehensive patient profiles from complex data while ensuring privacy and regulatory compliance."
+        conclusion="We provide a generative AI platform designed specifically for improving oncology trials and giving clinicians the information they need to provide optimal patient care. The Srotas Engine comprises a suite of LLMs trained on biomedical data to improve clinical trial design and medical decision-making. Clinicians can create a clear and comprehensive clinical picture of individual patients from complex, fragmented data while safeguarding data privacy and ensuring regulatory compliance."
         direction="end"
       />
       <AIToolsSection />

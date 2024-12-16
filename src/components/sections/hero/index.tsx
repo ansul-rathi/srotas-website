@@ -95,7 +95,7 @@ export default function Home() {
             leading-tight sm:leading-tight md:leading-tight lg:leading-tight
             text-white`}
           >
-            for Fastest Clinical Trial and Better Cancer Care
+            to Drive the Future of Clinical Trials and Patient Care in Oncology
           </h1>
         </div>
 
@@ -104,9 +104,7 @@ export default function Home() {
           <p className="text-sm sm:text-base md:text-lg 
             text-white/90 w-full sm:w-4/5 md:w-3/4
             leading-relaxed">
-            Healthcare and clinical trials sectors must evolve to leverage recent advances in AI. 
-            Srotas Health provides researchers and clinicians with tailored AI technology to drive 
-            the future of clinical trials and patient care in oncology.
+            Healthcare and clinical trials sectors must evolve to leverage recent advances in AI. Srotas Health provides oncology researchers and clinicians with tailored AI technology to ensure they maximize the potential of clinical trials and achieve the highest standards of patient care.
           </p>
         </div>
 
