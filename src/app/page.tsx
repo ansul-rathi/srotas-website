@@ -125,7 +125,7 @@ export default function Home() {
       <Hero />
       <LayeredVideoContainer />
       <Problem
-        badge="Techstars: Top 100 DeepTech Startup"
+        badge="The Problem :"
         title="Today's Approaches Are Failing Clinicians and Patients"
         statistics={customStats}
         conclusion="Clinicians deserve better tools. Patients deserve better outcomes."
