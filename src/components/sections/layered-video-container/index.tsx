@@ -1,17 +1,19 @@
 'use client';
 
 import React, { useRef, useState, useEffect } from 'react';
+import Image from 'next/image';
 import { motion, useInView, type MotionProps } from "framer-motion";
 
-const LayeredVideoContainer: React.FC = () => {
+const LayeredAnimationContainer: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef as React.RefObject<HTMLElement>, { once: false, amount: 0.3 });
   const [shouldAnimate, setShouldAnimate] = useState(false);
-  // Define types for different HTML elements with motion props
-type MotionDivProps = MotionProps & React.HTMLAttributes<HTMLDivElement>
 
-// Export typed motion components
- const MotionDiv = motion.div as React.FC<MotionDivProps>
+  // Define types for different HTML elements with motion props
+  type MotionDivProps = MotionProps & React.HTMLAttributes<HTMLDivElement>
+
+  // Export typed motion components
+  const MotionDiv = motion.div as React.FC<MotionDivProps>
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -20,7 +22,7 @@ type MotionDivProps = MotionProps & React.HTMLAttributes<HTMLDivElement>
     return () => clearTimeout(timer);
   }, []);
 
-  const videoVariants = {
+  const animationVariants = {
     initial: { 
       opacity: 1,
       transform: 'perspective(1000px) rotateX(85deg) translateY(-20%) scale(0.9)',
@@ -31,7 +33,7 @@ type MotionDivProps = MotionProps & React.HTMLAttributes<HTMLDivElement>
       transition: {
         type: "spring",
         stiffness: 30,
-        damping: 20,
+        damping: 12,
         mass: 1,
         duration: 1.5
       }
@@ -81,7 +83,7 @@ type MotionDivProps = MotionProps & React.HTMLAttributes<HTMLDivElement>
           perspectiveOrigin: "center bottom"
         }}
       >
-        {/* Video Wrapper for 3D space */}
+        {/* Animation Wrapper for 3D space */}
         <div
           className="relative w-[90%] max-w-5xl"
           style={{
@@ -90,10 +92,10 @@ type MotionDivProps = MotionProps & React.HTMLAttributes<HTMLDivElement>
             perspectiveOrigin: "center bottom"
           }}
         >
-          {/* Main video container */}
+          {/* Main animation container */}
           <MotionDiv
             className="relative w-full aspect-[16/9] bg-white rounded-xl shadow-2xl overflow-hidden"
-            variants={videoVariants}
+            variants={animationVariants}
             initial="initial"
             animate={shouldAnimate && isInView ? "animate" : "initial"}
             style={{
@@ -103,16 +105,14 @@ type MotionDivProps = MotionProps & React.HTMLAttributes<HTMLDivElement>
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
           >
-            <video 
-              className="w-full h-full object-cover"
-              autoPlay 
-              loop 
-              muted 
-              playsInline
-            >
-              <source src="/video/video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <Image 
+              src="/video/srotas.webp"
+              alt="Animated content"
+              fill
+              className="object-contain"
+              priority
+              unoptimized // Important for animated WebP/GIF
+            />
           </MotionDiv>
         </div>
       </div>
@@ -120,4 +120,4 @@ type MotionDivProps = MotionProps & React.HTMLAttributes<HTMLDivElement>
   );
 };
 
-export default LayeredVideoContainer;
+export default LayeredAnimationContainer;
