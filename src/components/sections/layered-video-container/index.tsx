@@ -9,10 +9,7 @@ const LayeredAnimationContainer: React.FC = () => {
   const isInView = useInView(containerRef as React.RefObject<HTMLElement>, { once: false, amount: 0.3 });
   const [shouldAnimate, setShouldAnimate] = useState(false);
 
-  // Define types for different HTML elements with motion props
   type MotionDivProps = MotionProps & React.HTMLAttributes<HTMLDivElement>
-
-  // Export typed motion components
   const MotionDiv = motion.div as React.FC<MotionDivProps>
 
   useEffect(() => {
@@ -41,7 +38,7 @@ const LayeredAnimationContainer: React.FC = () => {
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    if (!isInView) return;
+    if (!isInView || window.innerWidth < 768) return; // Disable mouse move effect on mobile/tablet
 
     const bounds = e.currentTarget.getBoundingClientRect();
     const mouseX = e.clientX - bounds.left;
@@ -66,7 +63,7 @@ const LayeredAnimationContainer: React.FC = () => {
 
   return (
     <div 
-      className="relative min-h-screen w-full overflow-hidden"
+      className="relative min-h-[50vh] md:min-h-[70vh] lg:min-h-screen w-full overflow-hidden"
       ref={containerRef}
     >
       {/* Split Background */}
@@ -77,7 +74,7 @@ const LayeredAnimationContainer: React.FC = () => {
 
       {/* Content Container */}
       <div 
-        className="relative w-full max-w-[90vw] mx-auto h-screen flex items-center justify-center"
+        className="relative w-full max-w-[95vw] md:max-w-[90vw] mx-auto h-[50vh] md:h-[70vh] lg:h-screen flex items-center justify-center"
         style={{
           perspective: "1000px",
           perspectiveOrigin: "center bottom"
@@ -85,7 +82,7 @@ const LayeredAnimationContainer: React.FC = () => {
       >
         {/* Animation Wrapper for 3D space */}
         <div
-          className="relative w-[90%] max-w-5xl"
+          className="relative w-full md:w-[90%] max-w-5xl px-4 md:px-0"
           style={{
             transformStyle: "preserve-3d",
             perspective: "1000px",
@@ -94,7 +91,7 @@ const LayeredAnimationContainer: React.FC = () => {
         >
           {/* Main animation container */}
           <MotionDiv
-            className="relative w-full aspect-[16/9] bg-white rounded-xl shadow-2xl overflow-hidden"
+            className="relative w-full aspect-video md:aspect-[16/9] bg-white rounded-xl shadow-2xl overflow-hidden"
             variants={animationVariants}
             initial="initial"
             animate={shouldAnimate && isInView ? "animate" : "initial"}
@@ -105,14 +102,19 @@ const LayeredAnimationContainer: React.FC = () => {
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
           >
-            <Image 
-              src="/video/srotas.webp"
-              alt="Animated content"
-              fill
-              className="object-contain"
-              priority
-              unoptimized // Important for animated WebP/GIF
-            />
+            <div className="relative w-full h-full">
+              <Image 
+                src="/video/srotas.webp"
+                alt="Animated content"
+                fill
+                className="object-contain"
+                priority
+                unoptimized
+                sizes="(max-width: 768px) 95vw,
+                       (max-width: 1200px) 90vw,
+                       1200px"
+              />
+            </div>
           </MotionDiv>
         </div>
       </div>
