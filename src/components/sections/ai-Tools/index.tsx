@@ -26,23 +26,21 @@ const toolsData: ToolData[] = [
     {
         id: "dataLink",
         title: "DataLink",
-        description: "Your DataLink description here",
+        description: "AI-driven tool that pools relevant patient data from diverse sources and presents it in a clear format, reducing administrative burdens and improving clinical decision-making.",
         features: [
-            "Feature 1",
-            "Feature 2",
-            "Feature 3",
-            "Feature 4"
+            "Automated Patient Data Structuring",
+            "EHR Search with Automated Citations",
+            "Efficient Precharting",
         ]
     },
     {
         id: "outcomePredict",
         title: "OutcomePredict",
-        description: "Your OutcomePredict description here",
+        description: "Leverages AI and real-time analytics to optimize trial management, improve patient outcomes, and drive clinical trial success.",
         features: [
-            "Feature 1",
-            "Feature 2",
-            "Feature 3",
-            "Feature 4"
+            "Real-time Analytics Dashboard",
+            "Patient Health Prediction",
+            "Clinical Trial Forecasting"
         ]
     }
 ];
@@ -51,7 +49,7 @@ const AIToolsSection = () => {
     const [selected, setSelected] = useState("insightMatch");
 
     return (
-        <section className="bg-gray-200 pb-28">
+        <section className="bg-gray-100 pb-8 md:pb-12 lg:pb-20">
             <div className='py-8 md:py-12 lg:py-20'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-center mb-8 md:mb-12 leading-tight text-black">
@@ -60,7 +58,7 @@ const AIToolsSection = () => {
                         <span className="block mt-2">of Clinical Research and Healthcare</span>
                     </h2>
 
-                    <div className="max-w-3xl mx-auto mb-8 md:mb-12">
+                    <div className="bg-gray-200 max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-12 py-1 px-1 border-2 border-white">
                         <Tabs
                             aria-label="AI Tools"
                             selectedKey={selected}
@@ -68,8 +66,8 @@ const AIToolsSection = () => {
                             variant="light"
                             classNames={{
                                 base: "w-full",
-                                tabList: "w-full relative p-0 border border-black ",
-                                tab: "h-12 px-4 md:px-8 bg-gray-200  data-[selected=true]:text-white transition-colors",
+                                tabList: "w-full relative p-0 flex",
+                                tab: "flex-1 h-10 sm:h-12 text-[10px] xs:text-xs sm:text-sm md:text-base px-1 xs:px-2 sm:px-4 md:px-8 data-[selected=true]:text-white transition-colors py-1 sm:py-2",
                                 cursor: "bg-white",
                                 panel: "pt-4",
                             }}
@@ -77,25 +75,41 @@ const AIToolsSection = () => {
                             <Tab
                                 key="insightMatch"
                                 title={
-                                    <span className={`text-sm md:text-base font-medium ${selected === 'insightMatch' ? 'text-black' : 'text-black'}`}>
-                                        InsightMatch
-                                    </span>
+                                    <div className="flex items-center justify-center w-full relative whitespace-nowrap">
+                                        <span className={`font-medium ${selected === 'insightMatch' ? 'text-black' : 'text-black'}`}>
+                                            InsightMatch
+                                        </span>
+                                        <div className={`absolute 
+                        right-[-30px] xs:right-[-20px] sm:right-[-50px] md:right-[-80px] 
+                        top-1/2 -translate-y-1/2 h-3 sm:h-4 md:h-5 w-px bg-black
+                        ${selected === 'dataLink' ? 'hidden' : ''}`}
+                                        />
+                                    </div>
                                 }
                             />
+
                             <Tab
                                 key="dataLink"
                                 title={
-                                    <span className={`text-sm md:text-base font-medium ${selected === 'dataLink' ? 'text-black' : 'text-black'}`}>
+                                    <span className={`font-medium whitespace-nowrap ${selected === 'dataLink' ? 'text-black' : 'text-black'}`}>
                                         DataLink
                                     </span>
                                 }
                             />
+
                             <Tab
                                 key="outcomePredict"
                                 title={
-                                    <span className={`text-sm md:text-base font-medium ${selected === 'outcomePredict' ? 'text-black' : 'text-black'}`}>
-                                        OutcomePredict
-                                    </span>
+                                    <div className="flex items-center justify-center w-full relative whitespace-nowrap">
+                                        <span className={`font-medium ${selected === 'outcomePredict' ? 'text-black' : 'text-black'}`}>
+                                            OutcomePredict
+                                        </span>
+                                        <div className={`absolute 
+                        left-[-25px] xs:left-[-20px] sm:left-[-50px] md:left-[-70px] 
+                        top-1/2 -translate-y-1/2 h-3 sm:h-4 md:h-5 w-px bg-black
+                        ${selected === 'dataLink' ? 'hidden' : ''}`}
+                                        />
+                                    </div>
                                 }
                             />
                         </Tabs>
@@ -111,8 +125,8 @@ const AIToolsSection = () => {
                             }}>
                                 <div className="flex flex-col lg:flex-row gap-6 lg:gap-12">
                                     <div className="w-full lg:w-1/2">
-                                        <div className="bg-white border border-gray-200 w-full aspect-video md:h-[400px] lg:h-[500px] flex items-center justify-center">
-                                            <p className="text-black">Video or animation</p>
+                                        <div className="bg-white/40 border border-gray-200 w-full aspect-video md:h-[400px] lg:h-[500px] flex items-center justify-center">
+                                            <p className="text-white">Video or animation</p>
                                         </div>
                                     </div>
 

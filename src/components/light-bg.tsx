@@ -1,5 +1,6 @@
 "use client";
 import { Chip } from "@nextui-org/react";
+import Image from "next/image";
 import React from "react";
 
 function LightBg() {
@@ -19,7 +20,7 @@ function LightBg() {
 Import events quickly with our Google Calendar and Outlook integrations.
       </h1>
 
-      <img alt="meetings" src="/meetings.svg" />
+      <Image alt="meetings" src="/meetings.svg" />
     </div> 
   );
 }
