@@ -1,9 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { useState } from 'react';
 import { Tabs, Tab } from "@nextui-org/tabs";
 import { Button } from "@nextui-org/button";
 import StatsSection from '../stats-section';
-import Image from 'next/image';
 import Lottie from "lottie-react";
 // import insightMatch from '../../../assets/insight-match.json';
 import dataLink from '../../../assets/data-link.json';
@@ -14,7 +14,7 @@ interface ToolData {
     title: string;
     description: string;
     features: string[];
-    video: string;
+    video: any;
     alt: string;
 }
 

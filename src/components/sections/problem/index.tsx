@@ -1,6 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 import ProblemStatement from "@components/components/common/ProblemStatement";
-import Image from "next/image";
 import Lottie from "lottie-react";
 
 interface StatisticItem {
@@ -13,7 +13,7 @@ interface ProblemProps {
   statistics?: StatisticItem[];
   conclusion: string;
   direction: 'start' | 'end';
-  video: { link: string; alt: string };
+  video: { link: any; alt: string };
 }
 
 const Problem: React.FC<ProblemProps> = ({

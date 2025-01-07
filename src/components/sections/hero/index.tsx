@@ -131,7 +131,7 @@ export default function Home() {
             </svg>
           }
         >
-          Get Started
+          Try our Demo
         </Button>
       </div>
 
