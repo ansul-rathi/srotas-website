@@ -127,7 +127,7 @@ const AIToolsSection = () => {
                     {toolsData.map((tool) => (
                         tool.id === selected && (
                             <div key={tool.id} className="p-4 md:p-8 lg:p-12" style={{
-                                backgroundImage: 'url("/images/bg.png")', // Update with your image path
+                                backgroundImage: 'url("/images/bg.webp")', // Update with your image path
                                 backgroundSize: 'cover',
                                 backgroundPosition: 'center',
                                 backgroundRepeat: 'no-repeat'

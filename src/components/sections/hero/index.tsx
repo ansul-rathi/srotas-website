@@ -71,13 +71,13 @@ import CompanySlider from "../companies";
 export default function Home() {
   return (
     <section 
-      className="flex flex-col items-center justify-center gap-4 pb-8 md:pb-10 pt-28 sm:pt-48 bg-[#120F24] min-h-[calc(100vh-4rem)]" 
-      style={{
-        backgroundImage: 'url("/images/bg.png")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
+      className="flex flex-1 flex-col items-center justify-center gap-4 pb-8 md:pb-10 pt-28 sm:pt-48 min-h-[calc(100vh-4rem)]" 
+      // style={{
+      //   backgroundImage: 'url("/images/bg.webp")',
+      //   backgroundSize: 'cover',
+      //   backgroundPosition: 'center',
+      //   backgroundRepeat: 'no-repeat'
+      // }}
     >
       <div className="w-full max-w-[90%] md:max-w-2xl lg:max-w-4xl xl:max-w-5xl text-center px-4">
         {/* Title Section */}

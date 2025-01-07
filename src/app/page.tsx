@@ -15,8 +15,18 @@ export default function Home() {
 
   return (
     <main>
-      <Hero />
-      <LayeredVideoContainer />
+      <div style={{
+        display: 'flex', flexDirection: 'column',
+        backgroundImage: 'url("/images/bg.webp")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+
+      }}>
+        <Hero />
+        <LayeredVideoContainer />
+        <div style={{ flex: 1 }}></div>
+      </div>
       <Problem
         badge="Top 100 DeepTech Startup :"
         title="Today's Approaches Are Failing Clinicians and Patients"

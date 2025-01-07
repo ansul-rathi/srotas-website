@@ -20,11 +20,11 @@ const LayeredAnimationContainer: React.FC = () => {
   }, []);
 
   const animationVariants = {
-    initial: { 
+    initial: {
       opacity: 1,
       transform: 'perspective(10px) rotateX(5deg) translateY(-20%) scale(0.9)',
     },
-    animate: { 
+    animate: {
       opacity: 1,
       transform: 'perspective(1000px) rotateX(0deg) translateY(0%) scale(1)',
       transition: {
@@ -62,8 +62,9 @@ const LayeredAnimationContainer: React.FC = () => {
   };
 
   return (
-    <div 
+    <div
       className="relative min-h-[50vh] md:min-h-[70vh] lg:min-h-screen w-full overflow-hidden"
+     
       ref={containerRef}
     >
       {/* Split Background */}
@@ -73,7 +74,7 @@ const LayeredAnimationContainer: React.FC = () => {
       </div>
 
       {/* Content Container */}
-      <div 
+      <div
         className="relative w-full max-w-[95vw] md:max-w-[90vw] mx-auto h-[50vh] md:h-[70vh] lg:h-screen flex items-center justify-center"
         style={{
           perspective: "1000px",
@@ -103,7 +104,7 @@ const LayeredAnimationContainer: React.FC = () => {
             onMouseLeave={handleMouseLeave}
           >
             <div className="relative w-full h-full">
-              <Image 
+              <Image
                 src="/video/srotas.webp"
                 alt="Srotas Demo"
                 fill

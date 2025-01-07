@@ -18,7 +18,7 @@ const ContactSection = () => {
 
   return (
     <section className="py-20" style={{
-      backgroundImage: 'url("/images/bg.png")', // Update with your image path
+      backgroundImage: 'url("/images/bg.webp")', // Update with your image path
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat'
