@@ -2,7 +2,7 @@
 "use client";
 import { useState } from 'react';
 import { Tabs, Tab } from "@nextui-org/tabs";
-import { Button } from "@nextui-org/button";
+// import { Button } from "@nextui-org/button";
 import StatsSection from '../stats-section';
 import Lottie from "lottie-react";
 import insightMatch from '../../../assets/insight-match.json';
