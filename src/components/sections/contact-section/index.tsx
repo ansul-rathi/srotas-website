@@ -43,12 +43,12 @@ const ContactSection = () => {
             <div className="space-y-8">
               <div className="bg-white/10 p-6">
                 <p className="text-gray-400 text-sm mb-2">LOCATION</p>
-                <p className="text-white text-xl">82 Muscat Street, Sydney 🇦🇺</p>
+                <p className="text-white text-xl">Hollywood, Northern Ireland, BT18 0DJ</p>
               </div>
 
               <div className="bg-white/10 p-6">
                 <p className="text-sm text-gray-400 mb-2">CALL US</p>
-                <p className="text-white text-xl">+61 (08) 9079 8383</p>
+                <p className="text-white text-xl">+44 (74) 4816 7373</p>
               </div>
             </div>
           </div>

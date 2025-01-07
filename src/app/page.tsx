@@ -23,6 +23,8 @@ export default function Home() {
         statistics={customStats}
         conclusion="Clinicians deserve better tools. Patients deserve better outcomes."
         direction="start"
+        video={{ link: '/video/problem.gif', alt: 'problem' }}
+
       />
 
       <Problem
@@ -31,6 +33,7 @@ export default function Home() {
         // statistics={customStats}
         conclusion="We provide a generative AI platform designed specifically for improving oncology trials and giving clinicians the information they need to provide optimal patient care. The Srotas Engine comprises a suite of LLMs trained on biomedical data to improve clinical trial design and medical decision-making. Clinicians can create a clear and comprehensive clinical picture of individual patients from complex, fragmented data while safeguarding data privacy and ensuring regulatory compliance."
         direction="end"
+        video={{ link: '/video/solution.gif', alt: 'solution' }}
       />
       <AIToolsSection />
       <ContactSection />

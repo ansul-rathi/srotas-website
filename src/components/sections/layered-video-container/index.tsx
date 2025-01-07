@@ -105,7 +105,7 @@ const LayeredAnimationContainer: React.FC = () => {
             <div className="relative w-full h-full">
               <Image 
                 src="/video/srotas.webp"
-                alt="Animated content"
+                alt="Srotas Demo"
                 fill
                 className="object-contain"
                 priority

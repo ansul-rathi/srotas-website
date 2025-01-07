@@ -3,12 +3,15 @@ import { useState } from 'react';
 import { Tabs, Tab } from "@nextui-org/tabs";
 import { Button } from "@nextui-org/button";
 import StatsSection from '../stats-section';
+import Image from 'next/image';
 
 interface ToolData {
     id: string;
     title: string;
     description: string;
     features: string[];
+    video: string;
+    alt: string;
 }
 
 const toolsData: ToolData[] = [
@@ -21,7 +24,9 @@ const toolsData: ToolData[] = [
             "Feasibility Analysis",
             "Simplified Patient Matching",
             "Real-time Notifications"
-        ]
+        ],
+        video: "/video/insight-match.gif",
+        alt: "Insight Match"
     },
     {
         id: "dataLink",
@@ -31,7 +36,9 @@ const toolsData: ToolData[] = [
             "Automated Patient Data Structuring",
             "EHR Search with Automated Citations",
             "Efficient Precharting",
-        ]
+        ],
+        video: "/video/data-link.gif",
+        alt: "Data Link"
     },
     {
         id: "outcomePredict",
@@ -41,7 +48,9 @@ const toolsData: ToolData[] = [
             "Real-time Analytics Dashboard",
             "Patient Health Prediction",
             "Clinical Trial Forecasting"
-        ]
+        ],
+        video: "/video/outcome.gif",
+        alt: "Outcome Predict"
     }
 ];
 
@@ -125,9 +134,18 @@ const AIToolsSection = () => {
                             }}>
                                 <div className="flex flex-col lg:flex-row gap-6 lg:gap-12">
                                     <div className="w-full lg:w-1/2">
-                                        <div className="bg-white/40 border border-gray-200 w-full aspect-video md:h-[400px] lg:h-[500px] flex items-center justify-center">
-                                            <p className="text-white">Video or animation</p>
+                                        <div className=" relative  rounded w-full overflow-hidden  aspect-video md:h-[400px] lg:h-[500px]  flex items-center justify-center">
+                                            {/* <p className="text-white">Video or animation</p> */}
+                                            <Image
+                                                src={tool.video}
+                                                alt={tool.alt}
+                                                fill
+                                                className="object-fill rounded "
+                                                priority
+                                                unoptimized
+                                            />
                                         </div>
+
                                     </div>
 
                                     <div className="flex flex-col w-full lg:w-1/2 text-white justify-center">
