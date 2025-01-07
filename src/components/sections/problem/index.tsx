@@ -43,7 +43,7 @@ const Problem: React.FC<ProblemProps> = ({
                 src={video.link}
                 alt={video.alt}
                 fill
-                className="object-fill rounded "
+                className="object-contain rounded "
                 priority
                 unoptimized
               />
