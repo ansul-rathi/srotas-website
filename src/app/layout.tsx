@@ -5,6 +5,7 @@ import Header from "@components/components/layout/header";
 import { Poppins } from "next/font/google";
 import Footer from "@components/components/layout/footer";
 import { CSPostHogProvider } from './posthog-provider'
+import CookieBanner from "./cookie-banner";
 
 
 // const geistSans = localFont({
@@ -36,14 +37,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <CSPostHogProvider>
-      <body
-        // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        className={poppins.className}
-      >
-        <Header />
-        <main>{children}</main>  
-        <Footer />    
-      </body>
+        <body
+          // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={poppins.className}
+        >
+          <Header />
+          <main>{children}</main>
+          <CookieBanner />
+
+          <Footer />
+        </body>
       </CSPostHogProvider>
     </html>
   );
