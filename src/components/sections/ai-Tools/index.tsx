@@ -140,7 +140,7 @@ const AIToolsSection = () => {
                                                 src={tool.video}
                                                 alt={tool.alt}
                                                 fill
-                                                className="object-fill rounded "
+                                                className="object-contain rounded "
                                                 priority
                                                 unoptimized
                                             />
