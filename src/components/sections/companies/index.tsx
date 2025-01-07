@@ -11,20 +11,29 @@ interface Data {
 
 const data: Data[] = [
     {
-        imgSrc: "/images/Companies/Apple.svg"
+        imgSrc: "/images/Companies/barts.svg"
     },
     {
-        imgSrc: "/images/Companies/CocaCola.svg"
+        imgSrc: "/images/Companies/cranfield.svg"
     },
     {
-        imgSrc: "/images/Companies/Samsung.svg"
+        imgSrc: "/images/Companies/hertfortshire.svg"
     },
     {
-        imgSrc: "/images/Companies/The Guardian.svg"
+        imgSrc: "/images/Companies/imperial_logo.png"
     },
     {
-        imgSrc: "/images/Companies/The New York Times.svg"
-    }
+        imgSrc: "/images/Companies/innovateuk.svg"
+    },
+    {
+        imgSrc: "/images/Companies/nihr.svg"
+    },
+    {
+        imgSrc: "/images/Companies/royal-academy.svg"
+    },
+    // {
+    //     imgSrc: "/images/Companies/techstart-ni.jpg"
+    // }
 ];
 
 export default class CompanySlider extends Component {
