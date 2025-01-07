@@ -1,15 +1,15 @@
 "use client"
 
-import Link from "next/link";
-import { useState } from "react";
-import { Menu as MenuIcon, X,  } from "lucide-react";
-import { menu } from "@components/config/menu";
+// import Link from "next/link";
+// import { useState } from "react";
+// import { Menu as MenuIcon, X,  } from "lucide-react";
+// import { menu } from "@components/config/menu";
 import Logo from "./logo";
 import { siteConfig } from "@components/config/config";
 
 const Header = () => {
-  const { main } = menu;
-  const [showMenu, setShowMenu] = useState(false);
+  // const { main } = menu;
+  // const [showMenu, setShowMenu] = useState(false);
   // const pathname = usePathname();
 
   return (

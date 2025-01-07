@@ -167,7 +167,7 @@ const AIToolsSection = () => {
                                             ))}
                                         </ul>
 
-                                        <Button
+                                        {/* <Button
                                             className="bg-[#6936F4] hover:bg-[#622df7] text-white px-6 md:px-8 py-2 h-10 md:h-12 w-full md:w-5/12 transition-colors"
                                             endContent={
                                                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -176,7 +176,7 @@ const AIToolsSection = () => {
                                             }
                                         >
                                             Learn More
-                                        </Button>
+                                        </Button> */}
                                     </div>
                                 </div>
                             )
