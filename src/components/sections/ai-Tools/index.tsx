@@ -5,7 +5,7 @@ import { Tabs, Tab } from "@nextui-org/tabs";
 import { Button } from "@nextui-org/button";
 import StatsSection from '../stats-section';
 import Lottie from "lottie-react";
-// import insightMatch from '../../../assets/insight-match.json';
+import insightMatch from '../../../assets/insight-match.json';
 import dataLink from '../../../assets/data-link.json';
 import outcome from '../../../assets/outcome.json';
 
@@ -29,7 +29,7 @@ const toolsData: ToolData[] = [
             "Simplified Patient Matching",
             "Real-time Notifications"
         ],
-        video: "",
+        video: insightMatch,
         alt: "Insight Match"
     },
     {
@@ -92,7 +92,8 @@ const AIToolsSection = () => {
                                         <span className={`font-medium ${selected === 'insightMatch' ? 'text-black' : 'text-black'}`}>
                                             InsightMatch
                                         </span>
-                                        <div className={`absolute 
+                                        <div
+                                            className={`absolute 
                         right-[-30px] xs:right-[-20px] sm:right-[-50px] md:right-[-80px] 
                         top-1/2 -translate-y-1/2 h-3 sm:h-4 md:h-5 w-px bg-black
                         ${selected === 'dataLink' ? 'hidden' : ''}`}
@@ -127,16 +128,16 @@ const AIToolsSection = () => {
                             />
                         </Tabs>
                     </div>
+                    <div className="p-4 md:p-8 lg:p-12" style={{
+                        backgroundImage: 'url("/images/bg.webp")', // Update with your image path
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat'
+                    }}>
+                        {toolsData.map((tool) => (
+                            tool.id === selected && (
 
-                    {toolsData.map((tool) => (
-                        tool.id === selected && (
-                            <div key={tool.id} className="p-4 md:p-8 lg:p-12" style={{
-                                backgroundImage: 'url("/images/bg.webp")', // Update with your image path
-                                backgroundSize: 'cover',
-                                backgroundPosition: 'center',
-                                backgroundRepeat: 'no-repeat'
-                            }}>
-                                <div className="flex flex-col lg:flex-row gap-6 lg:gap-12">
+                                <div key={tool.id} className="flex flex-col lg:flex-row gap-6 lg:gap-12">
                                     <div className="w-full lg:w-1/2">
                                         <div className=" relative  rounded w-full overflow-hidden  aspect-video md:h-[400px] lg:h-[500px]  flex items-center justify-center">
                                             {/* <p className="text-white">Video or animation</p> */}
@@ -153,7 +154,7 @@ const AIToolsSection = () => {
 
                                     </div>
 
-                                    <div className="flex flex-col w-full lg:w-1/2 text-white mt-8">
+                                    <div className="flex flex-col w-full lg:w-1/2 text-white mt-8 animate-fade-in">
                                         <h3 className="text-2xl md:text-3xl font-semibold mb-4">{tool.title}</h3>
                                         <p className="text-gray-300 mb-6 md:mb-8 text-sm md:text-base">{tool.description}</p>
 
@@ -178,9 +179,9 @@ const AIToolsSection = () => {
                                         </Button>
                                     </div>
                                 </div>
-                            </div>
-                        )
-                    ))}
+                            )
+                        ))}
+                    </div>
                 </div>
             </div>
 
