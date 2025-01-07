@@ -139,7 +139,7 @@ export default function Home() {
       <div className="w-full mt-8 sm:mt-12 md:mt-16 flex flex-col items-center gap-8">
   <div className="relative">
     <span className="text-4xl uppercase tracking-wider text-gray-300 font-medium">
-      Trusted by Industry Leaders
+      Trusted by
     </span>
     <div className="absolute w-10 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 -bottom-2 left-1/2 transform -translate-x-1/2 rounded-full"></div>
   </div>

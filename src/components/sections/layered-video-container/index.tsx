@@ -22,7 +22,7 @@ const LayeredAnimationContainer: React.FC = () => {
   const animationVariants = {
     initial: { 
       opacity: 1,
-      transform: 'perspective(1000px) rotateX(85deg) translateY(-20%) scale(0.9)',
+      transform: 'perspective(10px) rotateX(5deg) translateY(-20%) scale(0.9)',
     },
     animate: { 
       opacity: 1,
@@ -68,7 +68,7 @@ const LayeredAnimationContainer: React.FC = () => {
     >
       {/* Split Background */}
       <div className="absolute inset-0">
-        <div className="h-1/2 bg-[#120F24]" />
+        <div className="h-1/2 bg-transparent" />
         <div className="h-1/2 bg-gray-100" />
       </div>
 
