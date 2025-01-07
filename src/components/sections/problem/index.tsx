@@ -1,5 +1,7 @@
+'use client'
 import ProblemStatement from "@components/components/common/ProblemStatement";
 import Image from "next/image";
+import Lottie from "lottie-react";
 
 interface StatisticItem {
   text: string;
@@ -39,13 +41,18 @@ const Problem: React.FC<ProblemProps> = ({
           <div className="w-full lg:w-4/12">
             <div className="bg-white rounded-lg relative overflow-hidden shadow-lg aspect-square flex items-center justify-center">
               {/* <p className="text-gray-500 text-xl">Video or animation</p> */}
-              <Image
+              {/* <Image
                 src={video.link}
                 alt={video.alt}
                 fill
                 className="object-contain rounded "
                 priority
                 unoptimized
+              /> */}
+              <Lottie 
+                animationData={video.link}
+                loop={true}
+                autoplay={true}
               />
             </div>
           </div>

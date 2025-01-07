@@ -3,6 +3,8 @@ import ContactSection from '@components/components/sections/contact-section';
 import Hero from '@components/components/sections/hero'
 import LayeredVideoContainer from '@components/components/sections/layered-video-container';
 import Problem from '@components/components/sections/problem';
+import problem from '../assets/problem.json'
+import solution from '../assets/solution.json'
 
 export default function Home() {
   const customStats = [
@@ -33,7 +35,7 @@ export default function Home() {
         statistics={customStats}
         conclusion="Clinicians deserve better tools. Patients deserve better outcomes."
         direction="start"
-        video={{ link: '/video/problem.gif', alt: 'problem' }}
+        video={{ link: problem, alt: 'problem' }}
 
       />
 
@@ -43,7 +45,7 @@ export default function Home() {
         // statistics={customStats}
         conclusion="We provide a generative AI platform designed specifically for improving oncology trials and giving clinicians the information they need to provide optimal patient care. The Srotas Engine comprises a suite of LLMs trained on biomedical data to improve clinical trial design and medical decision-making. Clinicians can create a clear and comprehensive clinical picture of individual patients from complex, fragmented data while safeguarding data privacy and ensuring regulatory compliance."
         direction="end"
-        video={{ link: '/video/solution.gif', alt: 'solution' }}
+        video={{ link: solution, alt: 'solution' }}
       />
       <AIToolsSection />
       <ContactSection />

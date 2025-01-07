@@ -4,6 +4,10 @@ import { Tabs, Tab } from "@nextui-org/tabs";
 import { Button } from "@nextui-org/button";
 import StatsSection from '../stats-section';
 import Image from 'next/image';
+import Lottie from "lottie-react";
+// import insightMatch from '../../../assets/insight-match.json';
+import dataLink from '../../../assets/data-link.json';
+import outcome from '../../../assets/outcome.json';
 
 interface ToolData {
     id: string;
@@ -25,7 +29,7 @@ const toolsData: ToolData[] = [
             "Simplified Patient Matching",
             "Real-time Notifications"
         ],
-        video: "/video/insight-match.gif",
+        video: "",
         alt: "Insight Match"
     },
     {
@@ -37,7 +41,7 @@ const toolsData: ToolData[] = [
             "EHR Search with Automated Citations",
             "Efficient Precharting",
         ],
-        video: "/video/data-link.gif",
+        video: dataLink,
         alt: "Data Link"
     },
     {
@@ -49,7 +53,7 @@ const toolsData: ToolData[] = [
             "Patient Health Prediction",
             "Clinical Trial Forecasting"
         ],
-        video: "/video/outcome.gif",
+        video: outcome,
         alt: "Outcome Predict"
     }
 ];
@@ -136,19 +140,20 @@ const AIToolsSection = () => {
                                     <div className="w-full lg:w-1/2">
                                         <div className=" relative  rounded w-full overflow-hidden  aspect-video md:h-[400px] lg:h-[500px]  flex items-center justify-center">
                                             {/* <p className="text-white">Video or animation</p> */}
-                                            <Image
+                                            {/* <Image
                                                 src={tool.video}
                                                 alt={tool.alt}
                                                 fill
                                                 className="object-contain rounded "
                                                 priority
                                                 unoptimized
-                                            />
+                                            /> */}
+                                            <Lottie animationData={tool.video} loop={true} autoplay={true} />
                                         </div>
 
                                     </div>
 
-                                    <div className="flex flex-col w-full lg:w-1/2 text-white justify-center">
+                                    <div className="flex flex-col w-full lg:w-1/2 text-white mt-8">
                                         <h3 className="text-2xl md:text-3xl font-semibold mb-4">{tool.title}</h3>
                                         <p className="text-gray-300 mb-6 md:mb-8 text-sm md:text-base">{tool.description}</p>
 
