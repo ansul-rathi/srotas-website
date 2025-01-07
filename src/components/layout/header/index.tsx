@@ -1,9 +1,8 @@
 "use client"
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu as MenuIcon, X, ChevronDown } from "lucide-react";
+import { Menu as MenuIcon, X,  } from "lucide-react";
 import { menu } from "@components/config/menu";
 import Logo from "./logo";
 import { siteConfig } from "@components/config/config";
@@ -11,7 +10,7 @@ import { siteConfig } from "@components/config/config";
 const Header = () => {
   const { main } = menu;
   const [showMenu, setShowMenu] = useState(false);
-  const pathname = usePathname();
+  // const pathname = usePathname();
 
   return (
     <header className="absolute top-0 left-0 right-0 z-50 bg-transparent">
@@ -20,7 +19,7 @@ const Header = () => {
           <Logo src={siteConfig.logo} />
 
           {/* Desktop Menu */}
-          <ul className="hidden lg:flex items-center space-x-8 bg-transparent">
+          {/* <ul className="hidden lg:flex items-center space-x-8 bg-transparent">
             {main.map((item, i) => (
               <li key={`menu-${i}`} className="relative group">
                 {item.hasChildren ? (
@@ -54,10 +53,10 @@ const Header = () => {
                 )}
               </li>
             ))}
-          </ul>
+          </ul> */}
 
           {/* Desktop Buttons */}
-          {siteConfig.nav_button.enable && (
+          {/* {siteConfig.nav_button.enable && (
             <div className="hidden lg:flex items-center gap-4">
               <Link
                 href={siteConfig.nav_login_button.link}
@@ -72,20 +71,20 @@ const Header = () => {
                 {siteConfig.nav_button.label}
               </Link>
             </div>
-          )}
+          )} */}
 
           {/* Mobile Menu Button */}
-          <button
+          {/* <button
             className="lg:hidden text-white p-2"
             onClick={() => setShowMenu(!showMenu)}
             aria-label={showMenu ? "Close menu" : "Open menu"}
           >
             {showMenu ? <X size={24} /> : <MenuIcon size={24} />}
-          </button>
+          </button> */}
         </div>
 
         {/* Mobile Menu */}
-        {showMenu && (
+        {/* {showMenu && (
           <div className="lg:hidden absolute z-50 left-0 right-0 bg-[#120F24] shadow-lg">
             <ul className="px-4 py-2">
               {main.map((item, i) => (
@@ -120,7 +119,7 @@ const Header = () => {
               ))}
             </ul>
           </div>
-        )}
+        )} */}
       </nav>
     </header>
   );
