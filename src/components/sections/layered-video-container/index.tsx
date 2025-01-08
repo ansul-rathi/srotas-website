@@ -38,7 +38,7 @@ const LayeredAnimationContainer: React.FC = () => {
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    if (!isInView || window.innerWidth < 768) return; // Disable mouse move effect on mobile/tablet
+    if (!isInView || window.innerWidth < 768) return; 
 
     const bounds = e.currentTarget.getBoundingClientRect();
     const mouseX = e.clientX - bounds.left;
