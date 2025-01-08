@@ -1,3 +1,5 @@
+'use client'
+
 import AIToolsSection from '@components/components/sections/ai-Tools';
 import ContactSection from '@components/components/sections/contact-section';
 import Hero from '@components/components/sections/hero'
