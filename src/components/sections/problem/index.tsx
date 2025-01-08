@@ -2,6 +2,8 @@
 'use client'
 import ProblemStatement from "@components/components/common/ProblemStatement";
 import Lottie from "lottie-react";
+import problem from '../../../assets/problem.json'
+import solution from '../../../assets/solution.json'
 
 interface StatisticItem {
   text: string;
@@ -13,7 +15,7 @@ interface ProblemProps {
   statistics?: StatisticItem[];
   conclusion: string;
   direction: 'start' | 'end';
-  video: { link: any; alt: string };
+  video: string ;
 }
 
 const Problem: React.FC<ProblemProps> = ({
@@ -50,7 +52,7 @@ const Problem: React.FC<ProblemProps> = ({
                 unoptimized
               /> */}
               <Lottie 
-                animationData={video.link}
+                animationData={video==="solution" ? solution : problem}
                 loop={true}
                 autoplay={true}
               />
