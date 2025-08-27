@@ -1,86 +1,112 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable jsx-a11y/alt-text */
 "use client";
 
-import { title } from "@components/components/primitives";
-import { Button } from "@nextui-org/button";
-import CompanySlider from "../companies";
+import { cn } from "@components/lib/utils";
+import { Button } from "@nextui-org/react";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
-    <section
-      className="flex flex-1 flex-col items-center justify-center gap-4 pb-8 md:pb-10 pt-28 sm:pt-48 min-h-[calc(100vh-4rem)]"
+    <main
+      className="relative min-h-screen bg-[#3A0CA3] flex items-center w-full overflow-hidden px-6 border-white border-l-[1px] border-b-[1px]"
+      style={{
+        // display: 'flex', flexDirection: 'column',
+        backgroundImage: 'url("/images/trial/dot-pattern.svg")',
+        // backgroundSize: 'cover',
+        // backgroundPosition: 'center',
+        // backgroundRepeat: 'no-repeat'
+      }}
     >
-      <div className="w-full max-w-[90%] md:max-w-2xl lg:max-w-4xl xl:max-w-5xl text-center px-4">
-        {/* Title Section */}
-        <div className="space-y-2 sm:space-y-4">
-          <h1 className={`${title({ color: "blue", size: "lg" })} 
-            text-2xl sm:text-3xl md:text-4xl lg:text-5xl
-            bg-clip-text text-transparent bg-gradient-to-r 
-            from-purple-600 to-blue-600 leading-tight`}
+      {/* Background pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_70%)]" />
+
+      <div className="relative z-10  flex flex-col md:flex-row items-center justify-between  w-full">
+        {/* Left Section */}
+        <div className="text-center md:text-left w-7/12">
+          {/* <Chip
+            color="primary"
+            classNames={{
+              base: "bg-[#785AFA] text-white font-medium px-4 py-2 font-inter",
+            }}
           >
-            Generative AI{" "}
-          </h1>
+            <img scr="/images/trial/stars.svg"  className="w-10 h-10" /> Generative Clinical Intelligence for Trial Teams
+          </Chip> */}
 
-          <h1 className={`${title({ size: "lg" })} 
-            text-2xl sm:text-3xl md:text-4xl lg:text-5xl 
-            leading-tight sm:leading-tight md:leading-tight lg:leading-tight
-            text-white`}
-          >
-            for faster Clinical Trials and improved Patient Care in Oncology
-          </h1>
-        </div>
-
-        {/* Description Section */}
-        <div className="flex justify-center items-center mt-4 sm:mt-6 md:mt-8">
-          <p className="text-sm sm:text-base md:text-lg 
-            text-white/90 w-full sm:w-4/5 md:w-3/4
-            leading-relaxed">
-            Healthcare and clinical trials sectors must evolve to leverage recent advances in AI. Srotas Health provides oncology researchers and clinicians with tailored AI technology to ensure they maximize the potential of clinical trials and achieve the highest standards of patient care.
-          </p>
-        </div>
-
-        {/* Button Section */}
-        <Button
-          as="a"
-          href="https://stupendous-quokka-0a467e.netlify.app"
-          target="_blank"
-          className="mt-6 sm:mt-8 md:mt-10 
-            bg-indigo-600 hover:bg-indigo-700 
-            text-white text-sm sm:text-base
-            px-6 py-2 sm:px-8 sm:py-6
-            transition-all duration-300 ease-in-out"
-          endContent={
-            <svg
-              className="w-4 h-4 ml-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          <div className="w-full flex ">
+            <div
+              className={cn(
+                "flex bg-[#785AFA] text-white font-source font-normal text-[16px] px-3 py-2 rounded-full"
+              )}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          }
-        >
-          Try our Demo
-        </Button>
-      </div>
+              <img src="/images/trial/stars_white.svg" className="h-5 w-5" />
+              Generative Clinical Intelligence for Trial Teams
+            </div>
+          </div>
 
-      {/* Company Slider Section */}
-      <div className="w-full mt-8 sm:mt-12 md:mt-16 flex flex-col items-center gap-8">
-        <div className="relative">
-          <span className="text-4xl uppercase tracking-wider text-gray-300 font-medium">
-            Trusted by
-          </span>
-          <div className="absolute w-10 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 -bottom-2 left-1/2 transform -translate-x-1/2 rounded-full"></div>
+          <h1 className="mt-6 font-dm font-bold text-[42px] leading-tight">
+            Gen AI That Turns Patient Data Into{" "}
+            Trial-Ready Insights in <span className="text-[#E2FFBE]">0.2 Seconds</span>
+            
+          </h1>
+
+          <p className="mt-6 text-[18px] text-white font-normal font-source">
+            We automate site-level data analysis to accelerate patient
+            recruitment, reduce dropouts, and help clinical trials run faster.
+          </p>
+
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <Button
+              size="lg"
+              className="bg-[#E2FFBE] text-[#5630B7] font-bold rounded-full  font-dm text-base py-[12px] px-6"
+              endContent={<ArrowRight size={18} />}
+            >
+              Request a Demo
+            </Button>
+            <Button
+              size="lg"
+              variant="bordered"
+              className="border border-white text-white font-bold rounded-full px-6 font-dm text-[16px] py-[7px]"
+            >
+              Find a Trial
+            </Button>
+          </div>
         </div>
 
-        <div className="w-full">
-          <CompanySlider />
+        {/* Right Section (animated placeholder box) */}
+        <div className="flex justify-center w-5/12" style={{
+        // display: 'flex', flexDirection: 'column',
+        backgroundImage: 'url("/images/trial/circle-rings.svg")',
+        // backgroundSize: 'cover',
+        // backgroundPosition: 'center',
+        // backgroundRepeat: 'no-repeat'
+      }}>
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="relative  bg-white rounded-xl shadow-2xl w-[390px] h-[370px]"
+            style={{
+              backgroundImage: "url('/images/right-bg.svg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            {/* Floating bars */}
+            <motion.div
+              animate={{ x: [0, 20, -20, 0] }}
+              transition={{ repeat: Infinity, duration: 6 }}
+              className="absolute top-12 -left-20 w-32 h-8 bg-gray-200 rounded-lg"
+            />
+            <motion.div
+              animate={{ x: [0, -20, 20, 0] }}
+              transition={{ repeat: Infinity, duration: 6, delay: 1.5 }}
+              className="absolute bottom-10 -right-24 w-36 h-10 bg-gray-200 rounded-lg"
+            />
+          </motion.div>
         </div>
       </div>
-    </section>
+    </main>
   );
 }

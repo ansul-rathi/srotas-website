@@ -13,27 +13,27 @@ export const menu: MenuConfig = {
       url: "/",
     },
     {
-      name: "Solutions/Products",
+      name: "Solutions",
       url: "#",
-      // hasChildren: true,
-      // children: [
-      //   {
-      //     name: "InsightMatch",
-      //     url: "/solutions/insight-match",
-      //   },
-      //   {
-      //     name: "DataLink",
-      //     url: "/solutions/data-link",
-      //   }
-      // ],
+      hasChildren: true,
+      children: [
+        {
+          name: "InsightMatch",
+          url: "/solutions/insight-match",
+        },
+        {
+          name: "DataLink",
+          url: "/solutions/data-link",
+        }
+      ],
     },
     {
-      name: "Blog",
+      name: "About Us",
       url: "/",
     },
 
     {
-      name: "About Us",
+      name: "Contact Us",
       url: "/",
     },
   ],

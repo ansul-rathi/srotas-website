@@ -12,6 +12,12 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        dm: ["'DM Sans'", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+        helvetica: ["Helvetica", "Arial", "sans-serif"],
+        source: ['"Source Sans Pro"', 'sans-serif'],
+      },
     },
   },
   plugins: [],

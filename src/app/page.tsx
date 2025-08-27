@@ -1,36 +1,44 @@
 'use client'
 
-import AIToolsSection from '@components/components/sections/ai-Tools';
-import ContactSection from '@components/components/sections/contact-section';
+import StakeholderSection from '@components/components/sections/clinicat-research';
+import ClinicalTrial from '@components/components/sections/clinicat-trial';
+import HealthInAction from '@components/components/sections/health-in-action';
 import Hero from '@components/components/sections/hero'
-import LayeredVideoContainer from '@components/components/sections/layered-video-container';
-import Problem from '@components/components/sections/problem';
+import StatsSection from '@components/components/sections/stats';
 
 
 export default function Home() {
-  const customStats = [
-    { text: "80% of oncology trials face delays" },
-    { text: "6% of patients are enrolled in trials" },
-    { text: "Clinicians spend 35% of their time on EHR documentation" },
-    { text: "Unstructured data is challenging to manage and parse" },
-    { text: "Clinicians lack real-time insights" }
-  ];
 
   return (
     <main>
-      <div style={{
-        display: 'flex', flexDirection: 'column',
-        backgroundImage: 'url("/images/bg.webp")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
+      <div 
+      // style={{
+      //   display: 'flex', flexDirection: 'column',
+      //   backgroundImage: 'url("/images/bg.webp")',
+      //   backgroundSize: 'cover',
+      //   backgroundPosition: 'center',
+      //   backgroundRepeat: 'no-repeat'
+      // }}
+      >
+        <div className='bg-[#5C3CE5] pl-24'>
 
-      }}>
         <Hero />
-        <LayeredVideoContainer />
-        <div style={{ flex: 1 }}></div>
+        </div>
+        <div className='bg-[#5C3CE5] pl-24'>
+        <StatsSection />
+        </div>
+        <div className='bg-white pl-24'>
+        <ClinicalTrial />
+        </div>
+        <div className='bg-white pl-24'>
+          <HealthInAction />
+        </div>
+        <div className='bg-white pl-24'>
+          <StakeholderSection />
+        </div>
+        {/* <LayeredVideoContainer /> */}
       </div>
-      <Problem
+      {/* <Problem
         badge="Top 100 DeepTech Startup :"
         title="Today's Approaches Are Failing Clinicians and Patients"
         statistics={customStats}
@@ -49,7 +57,7 @@ export default function Home() {
         video='solution'
       />
       <AIToolsSection />
-      <ContactSection />
+      <ContactSection /> */}
     </main>
   )
 }
