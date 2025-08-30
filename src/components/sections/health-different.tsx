@@ -1,57 +1,83 @@
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable @next/next/no-img-element */
-import { Building2 } from "lucide-react"
+import React from 'react';
+import { Card, CardBody } from '@nextui-org/react';
+import TopSectionWithButton from '../top-section-with-button';
 
-const sections = [
-  {
-    title: "Research Sites",
-    description:
-      "Accelerate enrollment with instant patient-trial matching powered by AI. Streamline recruitment workflows so your team can focus on engaging qualified candidates.",
-    icon: Building2,
-  },
-  {
-    title: "Pharma",
-    description:
-      "Access diverse, representative patient populations and optimize site selection. Reduce startup delays and boost trial success with real-time, data-driven insights.",
-    icon: Building2,
-  },
-  {
-    title: "CROs",
-    description:
-      "Automate manual screening and pre-screening steps for faster, higher quality recruitment. Track progress, compliance, and site performance in one unified platform.",
-    icon: Building2,
-  },
-  {
-    title: "Hospitals",
-    description:
-      "Connect more patients to advanced clinical trials without administrative overhead. Enable your clinicians to identify and refer eligible participants seamlessly using AI-driven tools.",
-    icon: Building2,
-  },
-]
+const HealthDifferent = () => {
+  const topRowFeatures = [
+    {
+      title: 'AI Agents for Screening',
+      description: 'Our AI agent explains trials in plain language to patients, collects prescreen data, and ranks leads for callback which cuts telescreening workload.'
+    },
+    {
+      title: 'Natural Language Feasibility',
+      description: 'Query in plain English and receive instant de-identified patient counts, demographics, and site metrics to accelerate trial setup.'
+    }
+  ];
 
-export default function HealthDifferent() {
+  const bottomRowFeatures = [
+    {
+      title: 'Unified Data Integration',
+      description: 'Connect seamlessly with EMRs and site databases. Srotas pushes prescreening results directly into CTMS, EDC systems.'
+    },
+    {
+      title: 'Forecast & Analytics AI Dashboards',
+      description: 'Interactive AI powered dashboards deliver recruitment forecasts, site performance insights, and real-time progress tracking.'
+    },
+    {
+      title: 'Seamless Messaging & Scheduling',
+      description: 'Integrated with patient messaging platforms for automated reminders, appointment booking, and follow-up.'
+    }
+  ];
+
   return (
-    <div className="grid grid-cols-2 border-l-[1px]  border-[#5F6D7E]">
-      {sections.map((item, idx) => {
-        return (
-          <div key={idx} className="flex items-start gap-4 border-b-[1px]  border-[#5F6D7E]">
-            <div className="px-12 py-16 bg-[#F7F7F7]">
-            {/* <Icon className="w-8 h-8 text-purple-600" /> */}
-            <img 
-            src="/images/trial/research.svg"
-            height={100}
-            width={100}
-            />
-            </div>
-            <div className="py-6">
-              <h3 className="font-dm font-bold text-[28px] text-[#252424]">{item.title}</h3>
-              <p className="font-helvetica font-normal text-[16px] text-[#252424]">
-                {item.description}
-              </p>
-            </div>
-          </div>
-        )
-      })}
+    <div className="">
+      <TopSectionWithButton
+          badgeIcon="/images/trial/stars.svg"
+          badgeText="Core Features"
+          title="What Makes Srotas Health Different"
+          description="Why Clinical Trial Recruitment Is Still Broken"
+          imageSrc="/images/analytics-dashboard.png"
+          borderColor="#5C3CE5"
+        />
+      <div className="">
+        {/* Top Row - 2 Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 h-[400]">
+          {topRowFeatures.map((feature, index) => (
+            <Card key={index} className="bg-white shadow-sm border border-gray-200">
+              <CardBody className="p-8">
+                <div className="text-center">
+                  <h3 className="font-semibold text-[20px] text-[#252424] mb-4 leading-tight">
+                    {feature.title}
+                  </h3>
+                  <p className="font-normal text-[14px] text-[#666666] leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              </CardBody>
+            </Card>
+          ))}
+        </div>
+
+        {/* Bottom Row - 3 Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 h-[400]">
+          {bottomRowFeatures.map((feature, index) => (
+            <Card key={index} className="bg-white shadow-sm border border-gray-200">
+              <CardBody className="p-8">
+                <div className="text-center">
+                  <h3 className="font-semibold text-[20px] text-[#252424] mb-4 leading-tight">
+                    {feature.title}
+                  </h3>
+                  <p className="font-normal text-[14px] text-[#666666] leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              </CardBody>
+            </Card>
+          ))}
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
+
+export default HealthDifferent;

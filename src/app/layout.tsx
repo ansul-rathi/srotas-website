@@ -44,8 +44,9 @@ export default function RootLayout({
           <Header />
           <main>{children}</main>
           <CookieBanner />
-
+<div className="bg-white">
           <Footer />
+          </div>
         </body>
       </CSPostHogProvider>
     </html>

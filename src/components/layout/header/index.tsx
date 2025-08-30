@@ -19,7 +19,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20 ml-5">
           {/* Logo */}
           <div className="flex-shrink-0">
-            {/* <Logo src={siteConfig.logo} /> */}
+            <Logo src={siteConfig.logo} />
           </div>
 
           {/* Desktop Menu */}
@@ -29,7 +29,7 @@ const Header = () => {
                 <li key={`menu-${i}`} className="relative group">
                   {item.hasChildren ? (
                     <>
-                      <button className="inline-flex items-center text-white font-medium hover:text-white/80 transition-all duration-200 py-2">
+                      <button className="inline-flex items-center text-white font-medium hover:text-[#E2FFBE] transition-all duration-200 py-2">
                         {item.name}
                         <ChevronDown className="h-4 w-4 ml-1.5 transition-transform duration-200 group-hover:rotate-180" />
                       </button>
@@ -49,7 +49,7 @@ const Header = () => {
                   ) : (
                     <Link
                       href={item.url}
-                      className={`text-white hover:text-white/80 transition-all duration-200 py-2 font-dm font-medium text-[16px]
+                      className={`text-white hover:text-[#E2FFBE] transition-all duration-200 py-2 font-dm font-medium text-[16px]
                         ${
                         pathname !== item?.url ? 'text-white border-b-2 border-white' : ''
                       }

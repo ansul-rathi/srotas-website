@@ -1,57 +1,69 @@
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable @next/next/no-img-element */
-import { Building2 } from "lucide-react"
+import React from "react";
+import { BarChart3 } from "lucide-react";
+import TopSection from "../top-section";
 
-const sections = [
-  {
-    title: "Research Sites",
-    description:
-      "Accelerate enrollment with instant patient-trial matching powered by AI. Streamline recruitment workflows so your team can focus on engaging qualified candidates.",
-    icon: Building2,
-  },
-  {
-    title: "Pharma",
-    description:
-      "Access diverse, representative patient populations and optimize site selection. Reduce startup delays and boost trial success with real-time, data-driven insights.",
-    icon: Building2,
-  },
-  {
-    title: "CROs",
-    description:
-      "Automate manual screening and pre-screening steps for faster, higher quality recruitment. Track progress, compliance, and site performance in one unified platform.",
-    icon: Building2,
-  },
-  {
-    title: "Hospitals",
-    description:
-      "Connect more patients to advanced clinical trials without administrative overhead. Enable your clinicians to identify and refer eligible participants seamlessly using AI-driven tools.",
-    icon: Building2,
-  },
-]
+const SrotasWebsite = () => {
+  const services = [
+    {
+      title: "Sites",
+      description:
+        "AI Agents Cut down Screening time by 9000x and Trial Matching from 30 Minutes to 0.2 Seconds. Frees up staff time to focus on patients while boosting enrollment success.",
+    },
+    {
+      title: "CROs",
+      description:
+        "Leverage a network of 1,000+ UK GPs and 2,500 Indian sites to speed up feasibility and recruitment. Monitor site level performance with realtime AI dashboards.",
+    },
+    {
+      title: "Pharma",
+      description:
+        "Validate study feasibility upfront with access to 25M+ patient records. Identify the best-fit CROs and sites, forecast enrollment, and reduce trial costs.",
+    },
+  ];
 
-export default function StakeholderCards() {
   return (
-    <div className="grid grid-cols-2 border-l-[1px]  border-[#5F6D7E]">
-      {sections.map((item, idx) => {
-        return (
-          <div key={idx} className="flex items-start gap-4 border-b-[1px]  border-[#5F6D7E]">
-            <div className="px-12 py-16 bg-[#F7F7F7]">
-            {/* <Icon className="w-8 h-8 text-purple-600" /> */}
-            <img 
-            src="/images/trial/research.svg"
-            height={100}
-            width={100}
-            />
+    <div className="bg-white pb-28">
+      <TopSection
+        badgeIcon="/images/trial/stars.svg"
+        badgeText="Who We Help"
+        title="Empowering Every Stakeholder in Clinical Research"
+        description="Making clinical research more accessible, efficient, and impactful for everyone."
+        imageSrc="/images/analytics-dashboard.png"
+        borderColor="#5C3CE5"
+      />
+      <div className="max-w-4xl mx-auto mt-10">
+        {services.map((service, index) => (
+          <div key={index} className="relative">
+            <div className="flex items-start gap-6">
+              {/* Icon */}
+              <div className="flex-shrink-0 mt-1">
+                <div className="bg-[#F7F7F7] p-[38px]">
+                  <BarChart3 className="w-6 h-6 text-[#5C3CE5]" />
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="flex-1">
+                <h3 className="font-dm font-semibold text-[24px] text-[#252424]">
+                  {service.title}
+                </h3>
+                <p className="font-source font-normal text-[16px] text-[#252424]">
+                  {service.description}
+                </p>
+              </div>
             </div>
-            <div className="py-6">
-              <h3 className="font-dm font-bold text-[28px] text-[#252424]">{item.title}</h3>
-              <p className="font-helvetica font-normal text-[16px] text-[#252424]">
-                {item.description}
-              </p>
-            </div>
+
+            {/* Dotted connector line - only show between cards, not after the last one */}
+            {index < services.length - 1 && (
+              <div className="flex justify-start ml-12">
+                <div className="w-1.5 h-24 border-l-2 border-dashed border-[#6C39ED]"></div>
+              </div>
+            )}
           </div>
-        )
-      })}
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
+
+export default SrotasWebsite;

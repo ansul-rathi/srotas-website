@@ -24,10 +24,11 @@ export default function HealthInAction() {
       // imageHeight="h-[500px]"
     />
         
-        <img
+        {/* <img
         src="/images/trial/image1.png"
           className="object-cover w-full h-[400px]"
-        />
+        /> */}
+        <div className="bg-[#E9E9E9]  w-full h-[570]"/>
       </div>
     </div>
   );
