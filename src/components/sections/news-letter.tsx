@@ -5,7 +5,7 @@ import { cn } from "@components/lib/utils";
 
 export default function NewsletterSection() {
   return (
-    <div className="bg-[#E2FFBE] py-8 px-6 flex flex-col items-center text-center mx-24">
+    <div className="bg-[#E2FFBE] py-8 px-6 flex flex-col items-center text-center mx-24 border-[1px] border-dashed border-gray-400">
       {/* Badge */}
       <div className="w-full flex justify-center">
         <div
@@ -25,13 +25,13 @@ export default function NewsletterSection() {
       </h2>
 
       {/* Form */}
-      <div className="mt-8 flex w-full max-w-lg rounded-full overflow-hidden shadow-sm text-[15px] font-normal font-source">
+      <div className="mt-8 flex w-full max-w-lg rounded-full overflow-hidden shadow-sm text-[15px] font-normal font-source border-[1px] border-gray-200">
         <input
           type="email"
           placeholder="Enter your email"
           className="flex-1 px-4 py-3 outline-none text-gray-700 placeholder-gray-400"
         />
-        <button className="font-source font-bold text-[15px] bg-[#5C3CE5] px-[18px]">
+        <button className="font-source font-semibold text-[15px] bg-[#5C3CE5] px-[18px] ">
           Subscribe
         </button>
       </div>

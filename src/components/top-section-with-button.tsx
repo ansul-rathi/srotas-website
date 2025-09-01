@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 "use client";
@@ -86,7 +87,7 @@ export default function TopSectionWithButton({
 
           {/* Description */}
           {description && (
-            <div className="w-full flex text-left justify-start">
+            <div className="w-full flex text-left justify-between">
               <p className={cn(
                 "mt-4 text-[16px] font-normal text-[#5F6D7E] px-10 font-source w-7/12",
                 descriptionWidth,
@@ -94,16 +95,18 @@ export default function TopSectionWithButton({
               )}>
                 {description}
               </p>
+        <div className="text-white text-end mr-10 bg-[#5C3CE5] py-[14px] px-[57px] rounded-full">Learn More</div>
+              
             </div>
           )}
         </div>
         
         {/* Image */}
-        <img
+        {/* <img
           src={imageSrc}
           alt={imageAlt}
           className={cn("object-cover w-full", imageHeight, imageClassName)}
-        />
+        /> */}
       </div>
     </div>
   );

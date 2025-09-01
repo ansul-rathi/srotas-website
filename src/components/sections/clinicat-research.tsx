@@ -2,7 +2,7 @@ import React from "react";
 import { BarChart3 } from "lucide-react";
 import TopSection from "../top-section";
 
-const SrotasWebsite = () => {
+const StackHolderSection = () => {
   const services = [
     {
       title: "Sites",
@@ -68,4 +68,4 @@ const SrotasWebsite = () => {
   );
 };
 
-export default SrotasWebsite;
+export default StackHolderSection;

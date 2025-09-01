@@ -4,17 +4,19 @@ import Link from 'next/link';
 
 interface LogoProps {
   src: string;
+  width?: number;
+  height?: number;
 }
 
-const Logo = ({ src }: LogoProps) => {
+const Logo = ({ src, width, height }: LogoProps) => {
   return (
     <Link href="/" className="flex items-center">
       <div className="flex items-center space-x-2">
         <Image 
           src={src} 
           alt="Srotas Health" 
-          width={110} 
-          height={110}
+          width={width ? width : 110} 
+          height={height ? height : 110}
           priority // Since this is above the fold
         />
         {/* <span className="text-xl font-semibold text-white">
