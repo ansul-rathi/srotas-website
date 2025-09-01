@@ -55,15 +55,17 @@ export default function TopSectionWithButton({
   className,
 }: SectionProps) {
   return (
-    <div className={cn("w-full bg-[#FAFAFA] rounded-lg shadow-sm", containerClassName, className)}>
-      <div className={cn("flex flex-col text-left border-l-[1px] border-[#9F9C9C]", innerContainerClassName)}>
+    <div className={cn("w-full rounded-lg shadow-sm", containerClassName, className)} style={{
+        backgroundImage: 'url("/images/trial/dot-pattern.svg")',
+      }}>
+      <div className={cn("flex flex-col text-left border-l-[1px] border-[#9F9C9C] opacity-90 bg-[#FAFAFA]", innerContainerClassName)}>
         <div 
           className={cn("border-l-[10px] py-14", contentPadding)}
           style={{ borderLeftColor: borderColor }}
         >
           {/* Badge */}
           {badgeText && (
-            <div className="w-full flex justify-start ml-10">
+            <div className=" flex justify-start ml-10">
               <div className={cn(
                 "flex bg-white text-[#6d6c6c] font-medium px-2 pr-10 py-2 border-[1px] border-[#4B5162] rounded-full w-fit gap-2 font-source opacity-80",
                 badgeClassName

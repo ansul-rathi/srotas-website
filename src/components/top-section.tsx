@@ -55,8 +55,10 @@ export default function TopSection({
   className,
 }: SectionProps) {
   return (
-    <div className={cn("w-full bg-[#FAFAFA] rounded-lg shadow-sm", containerClassName, className)}>
-      <div className={cn("flex flex-col text-center border-l-[1px] border-[#9F9C9C]", innerContainerClassName)}>
+    <div className={cn("w-full  rounded-lg shadow-sm", containerClassName, className)}  style={{
+        backgroundImage: 'url("/images/trial/dot-pattern.svg")',
+      }}>
+      <div className={cn("flex flex-col text-center border-l-[1px] border-[#9F9C9C] bg-[#FAFAFA] opacity-90", innerContainerClassName)}>
         <div 
           className={cn("border-l-[10px] py-14", contentPadding)}
           style={{ borderLeftColor: borderColor }}

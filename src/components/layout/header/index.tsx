@@ -14,7 +14,7 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#5C3CE5] border-white border-b-[1px]">
+    <header className="top-0 left-0 right-0 z-50 bg-[#5C3CE5] border-white border-b-[1px]">
       <nav className="container border-l-[96px] border-[#E2FFBE]">
         <div className="flex items-center justify-between h-20 ml-5">
           {/* Logo */}

@@ -22,7 +22,9 @@ const SrotasWebsite = () => {
   ];
 
   return (
-    <div className="bg-white pb-28">
+    <div className="bg-white" style={{
+        backgroundImage: 'url("/images/trial/grid.svg")',
+      }}>
       <TopSection
         badgeIcon="/images/trial/stars.svg"
         badgeText="Who We Help"
@@ -31,7 +33,7 @@ const SrotasWebsite = () => {
         imageSrc="/images/analytics-dashboard.png"
         borderColor="#5C3CE5"
       />
-      <div className="max-w-4xl mx-auto mt-10">
+      <div className="border-[1px] border-gray-300 py-[52px] px-[240px]">
         {services.map((service, index) => (
           <div key={index} className="relative">
             <div className="flex items-start gap-6">

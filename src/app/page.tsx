@@ -1,19 +1,18 @@
-'use client'
+"use client";
 
-import StakeholderSection from '@components/components/sections/clinicat-research';
-import ClinicalTrial from '@components/components/sections/clinicat-trial';
-import HealthDifferent from '@components/components/sections/health-different';
-import HealthInAction from '@components/components/sections/health-in-action';
-import Hero from '@components/components/sections/hero'
-import NewsletterSection from '@components/components/sections/news-letter';
-import StatsSection from '@components/components/sections/stats';
-
+import StakeholderSection from "@components/components/sections/clinicat-research";
+import ClinicalTrial from "@components/components/sections/clinicat-trial";
+import HealthDifferent from "@components/components/sections/health-different";
+import HealthInAction from "@components/components/sections/health-in-action";
+import Hero from "@components/components/sections/hero";
+import ManualTrial from "@components/components/sections/manual-trial";
+import NewsletterSection from "@components/components/sections/news-letter";
+import StatsSection from "@components/components/sections/stats";
 
 export default function Home() {
-
   return (
     <main>
-      <div 
+      <div
       // style={{
       //   display: 'flex', flexDirection: 'column',
       //   backgroundImage: 'url("/images/bg.webp")',
@@ -22,26 +21,28 @@ export default function Home() {
       //   backgroundRepeat: 'no-repeat'
       // }}
       >
-        <div className='bg-[#5C3CE5] pl-24'>
-
-        <Hero />
+        <div className="bg-[#5C3CE5] pl-24">
+          <Hero />
         </div>
-        <div className='bg-[#5C3CE5] pl-24'>
-        <StatsSection />
+        <div className="">
+          <StatsSection />
         </div>
-        <div className='bg-white pl-24'>
-        <ClinicalTrial />
+        <div className="bg-white pl-24">
+          <ClinicalTrial />
         </div>
-        <div className='bg-white pl-24'>
+        <div className="bg-white pl-24">
           <HealthInAction />
         </div>
-        <div className='bg-white pl-24'>
+        <div className="bg-white pl-24">
           <StakeholderSection />
         </div>
-        <div className='bg-white pl-24'>
+        <div className="bg-white pl-24">
+          <ManualTrial />
+        </div>
+        <div className="bg-white pl-24">
           <HealthDifferent />
         </div>
-        <div className='bg-white pl-24 pt-24'>
+        <div className="bg-white pl-24 pt-24">
           <NewsletterSection />
         </div>
         {/* <LayeredVideoContainer /> */}
@@ -67,5 +68,5 @@ export default function Home() {
       <AIToolsSection />
       <ContactSection /> */}
     </main>
-  )
+  );
 }

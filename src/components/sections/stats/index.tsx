@@ -1,10 +1,11 @@
 export default function StatsSection() {
   return (
-    <section className="w-full border-white border-[1px]">
-      <div className="grid md:grid-cols-2">
+    <section className="w-full flex ">
+<div className="bg-[#5C3CE5] w-[182px] border-t-[1px] border-white border-dashed [border-image:repeating-linear-gradient(to_right,white_0,white_5px,transparent_0px,transparent_10px)_1]" />
+      <div className="grid md:grid-cols-2 border-white border-l-[1px] border-b-[1px]">
         {/* Left side */}
-        <div className="bg-[#6C47FF] text-white flex items-center justify-center p-10">
-          <p className="text-lg leading-relaxed font-dm text-[18px] font-semibold">
+        <div className="bg-[#6343EE] text-white flex items-center justify-center p-10">
+          <p className="leading-relaxed font-dm text-[18px] font-semibold">
             Access to millions of patient records, connected general practices in the UK and India,
             and a broad network of sites, CROs, and sponsors.
           </p>
