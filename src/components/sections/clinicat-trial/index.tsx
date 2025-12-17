@@ -5,6 +5,8 @@ export default function ClinicalTrial() {
   return (
     <section className="">
       {/* Left Column */}
+      <div className="border-b-[1px] border-[#9F9C9C] pl-24">
+
        <TopSection
             badgeIcon="/images/trial/stars.svg"
             badgeText="Product Demo"
@@ -16,7 +18,8 @@ export default function ClinicalTrial() {
             // titleClassName="text-3xl md:text-[40px]"
             // descriptionWidth="w-2/3"
             // imageHeight="h-[500px]"
-          />
+            />
+            </div>
       <StrugglesLeft />
     </section>
   );

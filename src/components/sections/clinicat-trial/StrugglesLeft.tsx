@@ -61,7 +61,7 @@ export default function StrugglesLeft() {
 
       <div className="space-y-6 border-l-[1px] border-[#9F9C9C]">
         <div className=" border-l-[10px] border-white">
-          <div className=" border-t-[1px] border-[#9F9C9C]" />
+          {/* <div className=" border-t-[1px] border-[#9F9C9C]" /> */}
           <div className="my-28 ">
             {struggles.map((item, index) => (
               <div
@@ -111,7 +111,7 @@ export default function StrugglesLeft() {
       </div>
 
       {/* Right Section (Carousel Image) */}
-      <div className="flex items-center justify-center bg-white border-t-[1px] border-[#9F9C9C]">
+      <div className="flex items-center justify-center bg-white ">
         <Image
           src={struggles[selected].image}
           alt={struggles[selected].imageAlt}

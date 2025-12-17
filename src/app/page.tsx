@@ -27,7 +27,7 @@ export default function Home() {
         <div className="">
           <StatsSection />
         </div>
-        <div className="bg-white pl-24">
+        <div className="bg-white">
           <ClinicalTrial />
         </div>
         <div className="bg-white pl-24">
@@ -42,7 +42,7 @@ export default function Home() {
         <div className="bg-white pl-24">
           <HealthDifferent />
         </div>
-        <div className="bg-white pl-24 pt-24">
+        <div className="bg-white pl-24 border-l-[]">
           <NewsletterSection />
         </div>
         {/* <LayeredVideoContainer /> */}
